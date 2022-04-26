@@ -2,5 +2,6 @@
 // require('../models')
 
 module.exports = {
-    reviews: require('./reviews_controller')
+    reviews: require('./reviews_controller'),
+    parks: require('./park_controller')
 }
