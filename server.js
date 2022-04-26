@@ -17,6 +17,8 @@ app.use(express.urlencoded({ extended: false }))
 // EXAMPLES: app.use('/products', controllers.products) 
 // app.use('/reviews', controllers.reviews) 
 app.use('/parks', controllers.parks);
+app.use('/users', controllers.users);
+
 
 // Home Route
 app.get('/', (request, response) => response.send('Test'))
