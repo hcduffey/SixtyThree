@@ -3,5 +3,6 @@
 
 module.exports = {
     reviews: require('./reviews_controller'),
-    parks: require('./park_controller')
+    parks: require('./park_controller'),
+    users: require('./user_controller')
 }
