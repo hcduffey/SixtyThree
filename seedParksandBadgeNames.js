@@ -2,6 +2,7 @@ require('./config/db.connection');
 require('dotenv').config();
 
 const db = require('./models');
+
 const axios = require('axios');
 
 async function getOnePark(parkCode) {
@@ -70,5 +71,20 @@ async function clearDBAndSeeDB() {
     }
 }
 
+async function seedBadgeNames() {
+    try {
+        let parks = await db.Park.find({});
+
+        for(let i = 0; i < parks.length; i++){
+            let newBadge = await db.Badge.create({name: parks[i].name, avatar: "changeme"});
+        }
+    }
+    catch(err) {
+        console.log(err);
+    }
+}
+
 //getOnePark('acad');
-clearDBAndSeeDB();
+//clearDBAndSeeDB();
+
+//seedBadgeNames();
