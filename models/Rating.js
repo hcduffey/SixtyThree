@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const ratingSchema = Schema({
     rating: {
-        type: number,
+        type: Number,
         min: [0, 'ratings must not be below zero'],
         required: [true, 'a rating is required for ratings']
     },
@@ -13,14 +13,16 @@ const ratingSchema = Schema({
         trim: true,
     },
     user: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
         required: [true, 'a user is required for ratings']
     },
     park: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Park",
         required: [true, 'a park is required for ratings']
     }
 }, {timestamps: true});
 
-const Park = mongoose.model("Park", parkSchema);
-module.exports = Park;
+const Rating = mongoose.model("Rating", ratingSchema);
+module.exports = Rating;

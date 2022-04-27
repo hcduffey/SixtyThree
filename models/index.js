@@ -1,8 +1,18 @@
-// This is requiring in the connection that's linking to my Mongo Atlas
-require('../config/db.connection')
+module.exports = {
+    Badge: require('./Badge'),
+    Park: require('./Park'),
+    Rating: require('./Rating'),
+    User: require('./User')
+};
 
-const Park = require('./Park');
-const User = require('./User');
+// TEST CODE - It may be useful to keep in the comments as a reference
+
+// This is requiring in the connection that's linking to my Mongo Atlas
+// require('../config/db.connection')
+
+// const Park = require('./Park');
+// const User = require('./User');
+// const Rating = require('./Rating');
 
 
 // User.create({
@@ -49,7 +59,17 @@ const User = require('./User');
 
 // User.find({name: "Cliff Duffey"}).then((response) => console.log(response));
 
+// async function createRating() {
+//     try {
+//         let parktoRate = await Park.findOne({name: "Test Park"});
+//         let user = await User.findOne({name: "Cliff Duffey"});
 
-// module.exports = {
-//     Review: require('./Review')
+//         let newRating = await Rating.create({rating: 5, comment: "Good park", park: parktoRate, user: user});
+//         console.log(newRating);
+//     }
+//     catch(err) {
+//         console.log(err);
+//     }
 // }
+
+// createRating();

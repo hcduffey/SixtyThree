@@ -32,6 +32,10 @@ const userSchema = Schema({
     parks: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Park'
+    }],
+    badges: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Badge'
     }]
 }, {timestamps: true});
 
