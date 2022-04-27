@@ -2,14 +2,15 @@ const express = require('express')
 const router = express.Router()
 
 const db = require('../models')
-
-
 // ROUTES
 
 // index route
 router.get('/', async(req, res, next) => {
     try {
-        res.send("In park index");
+        const badges = await db.Badge.find({})
+        console.log(badges)
+        const context = {badges: badges}
+        res.render('parks.ejs', context)
     }
     catch(err) {
         console.log("Error in park index: " + err);

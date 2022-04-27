@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include( 'partials/head.ejs', { page: 'National Parks'}) %>
+    <%- include( 'partials/head.ejs', { page: 'National Parks'}) %> 
 <body>
-    
+    <div class="container">
+        <h1>National Parks</h1>
+        <% for(let i=0; i < badges.length; i++){ %>
+                    <a href="/parks/<%= i %>"><img class="badge-image" id="badge <% i %>" src="<%= badges[i].avatar %>" alt="<%= badges[i].name %>" /></a>
+                        <h3><a href="/parks/<%= i %>"><%= badges[i].name %></a></h3>
+        <%  }   %>
+    </div>
 </body>
 </html>
