@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const validator = require('mongoose-validator')
 const Schema = mongoose.Schema;
 
 const ratingSchema = Schema({
