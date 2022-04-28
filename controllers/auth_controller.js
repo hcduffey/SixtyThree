@@ -26,7 +26,8 @@ router.post('/login', async (req, res, next) => {
         // if login is successful, create a session
         req.session.currentUser = {
             id: foundUser._id,
-            username: foundUser.email
+            username: foundUser.email,
+            name: foundUser.name
         }
 
         // then redirect to their profile page

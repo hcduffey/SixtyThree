@@ -2,6 +2,9 @@
 <html lang="en">
 <%- include( 'partials/head.ejs', { page: 'Park'}) %>
 <body>
+
+    <%- include('./partials/nav.ejs') %>
+
     <div class="container">
         <style>
             h1, h2 {
@@ -17,6 +20,7 @@
                 max-width: 150px;
             }
         </style>
+
         <h1> <%= parks[id].name %> </h1>
         <h2>National Park</h2>
         <img src="<%= parks[id].imageUrl %>" alt="<%parks[id].name%> Image">

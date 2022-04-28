@@ -6,16 +6,6 @@ const db = require('../models')
 
 // ROUTES
 
-// This protects all routers to the users resource to ensure
-router.all('*', (req, res, next) => {
-
-    if(!req.session.hasOwnProperty('currentUser')) {
-        return res.redirect('/login');
-    }
-    
-    next();
-});
-
 // index route
 router.get('/', async(req, res, next) => {
     try {

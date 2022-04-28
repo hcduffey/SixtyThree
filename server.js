@@ -8,6 +8,9 @@ const controllers = require('./controllers')
 const app = express();
 const PORT = 4000;
 
+const routes = require('./navLinks');
+const navLinks = require('./navLinks');
+
 require('./config/db.connection');
 
 app.set('view engine', 'ejs')
@@ -28,6 +31,14 @@ app.use(
         }
     })
 );
+
+app.use(navLinks);
+
+/* SECTION Middleware */
+app.use(function (req, res, next) {
+    res.locals.user = req.session.currentUser;
+    next();
+});
 
 // Controllers
 // EXAMPLES: app.use('/products', controllers.products) 
