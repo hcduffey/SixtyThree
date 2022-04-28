@@ -6,6 +6,16 @@ const db = require('../models')
 
 // ROUTES
 
+// This protects all routers to the users resource to ensure
+router.all('*', (req, res, next) => {
+
+    if(!req.session.hasOwnProperty('currentUser')) {
+        return res.redirect('/login');
+    }
+    
+    next();
+});
+
 // index route
 router.get('/', async(req, res, next) => {
     try {
@@ -16,11 +26,6 @@ router.get('/', async(req, res, next) => {
         console.log("Error in user index: " + err);
         return next();
     }
-});
-
-// new route (sign-up for a user)
-router.get('/new', (req, res) => {
-    res.render('./users/new.ejs');
 });
 
 // edit route (form for editing user info)
@@ -45,19 +50,6 @@ router.get('/:id', async(req, res, next) => {
     }
     catch(err) {
         console.log("Error in user show: " + err);
-        return next();
-    }
-});
-
-// create route
-router.post('/', async(req, res, next) => {
-    try {
-        // TODO: Add password bcrypt stuff
-        let newUser = await db.User.create(req.body);
-        res.redirect(`/users/${newUser._id}`);
-    }
-    catch(err) {
-        console.log("Error in user create (post): " + err);
         return next();
     }
 });
