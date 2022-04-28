@@ -4,6 +4,8 @@
 <%- include( '../partials/head.ejs', { page: 'Edit User Profile'}) %>
 
 <body>
+    <%- include('../partials/nav.ejs') %>
+
     <form action="/users/<%= user._id %>?_method=PUT" method="POST">
         <label for="name">Name</label>
         <input name="name" type="text" value="<%= user.name %>">

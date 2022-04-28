@@ -3,6 +3,8 @@
 <%- include('../partials/head.ejs', { page: 'List Users'}) %>
 <body>
 
+<%- include('../partials/nav.ejs') %>
+
 <ul>
     <% for(let i=0; i < users.length; i++) { %>
         <li><img height="100px" src="<%= users[i].avatar %>" alt="user image"> <a href="/users/<%= users[i]._id %>"> <%= users[i].name %> </a></li>

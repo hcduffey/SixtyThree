@@ -2,6 +2,8 @@
 <html lang="en">
     <%- include( 'partials/head.ejs', { page: 'National Parks'}) %> 
 <body>
+    <%- include('./partials/nav.ejs') %>
+
     <div class="container">
         <h1>National Parks</h1>
         <% for(let i=0; i < badges.length; i++){ %>
