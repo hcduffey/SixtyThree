@@ -5,9 +5,11 @@
     <link rel="stylesheet" href="/styles/main.css" />
     <script src="/scripts/app.js" defer></script>
 
-        <% typeof page !== 'undefined' ?  
-        <title>SixtyThree | <%= page %></title> : 
-        <title>SixtyThree</title> %> 
-
+    <% if(typeof page !== 'undefined') { %>
+        <title>SixtyThree | <%= page %></title>
+    <% } else { %> 
+        <title>SixtyThree</title> 
+    <% } %> 
+  
  
 </head>
