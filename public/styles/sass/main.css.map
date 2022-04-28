@@ -1,0 +1,23 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "_abstracts/_variables.scss",
+        "_abstracts/_mixins.scss",
+        "_components/_buttons.scss",
+        "_core/_reset.scss",
+        "_core/_typography.scss",
+        "_layout/_footer.scss",
+        "_layout/_header.scss",
+        "_layout/_navigation.scss",
+        "_layout/_sidebar.scss",
+        "_pages/_home.scss",
+        "_pages/_parkprofile.scss",
+        "_pages/_parks.scss",
+        "_pages/_profile.scss",
+        "_pages/_userindex.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
