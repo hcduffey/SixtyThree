@@ -84,7 +84,7 @@ async function seedBadgeNames() {
         console.log(err);
     }
 }
-getAllParksAndSeed()
+
 //getOnePark('acad');
 // clearDBAndSeeDB();
 
