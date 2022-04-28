@@ -2,7 +2,26 @@
 <html lang="en">
 <%- include( 'partials/head.ejs', { page: 'Park'}) %>
 <body>
-    <% let parks = db.Park.find({}) %>
-    <h1> <%= parks[id].name %> </h1>
+    <div class="container">
+        <style>
+            h1, h2 {
+                text-align: center;
+                margin: auto;}
+            img {
+                max-width: 1000px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;}
+            .badge-image {
+                max-width: 150px;
+            }
+        </style>
+        <h1> <%= parks[id].name %> </h1>
+        <h2>National Park</h2>
+        <img src="<%= parks[id].imageUrl %>" alt="<%parks[id].name%> Image">
+        <h3>ABOUT: NEED TO GET FROM DATABASE PARK DESCRIPTION</h3>
+        <img class="badge-image" id="badge-show<%id%>" src="<%= badges[id].avatar %>" alt="<%=badges[id].name%> Badge" />
+        <h3>REVIEWS: THIS PARK SUCKS 0/5</h3>
 </body>
 </html>
