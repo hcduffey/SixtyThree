@@ -20,7 +20,7 @@
         <h1> <%= parks[id].name %> </h1>
         <h2>National Park</h2>
         <img src="<%= parks[id].imageUrl %>" alt="<%parks[id].name%> Image">
-        <h3>ABOUT: NEED TO GET FROM DATABASE PARK DESCRIPTION</h3>
+        <h3>ABOUT: <%= parks[id].description %></h3>
         <img class="badge-image" id="badge-show<%id%>" src="<%= badges[id].avatar %>" alt="<%=badges[id].name%> Badge" />
         <h3>REVIEWS: THIS PARK SUCKS 0/5</h3>
 </body>
