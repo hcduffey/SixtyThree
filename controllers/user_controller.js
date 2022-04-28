@@ -9,7 +9,8 @@ const db = require('../models')
 // index route
 router.get('/', async(req, res, next) => {
     try {
-        res.send("In user index");
+        const users = await db.User.find({});
+        res.render('./users/index.ejs', {users: users});
     }
     catch(err) {
         console.log("Error in user index: " + err);
@@ -18,20 +19,15 @@ router.get('/', async(req, res, next) => {
 });
 
 // new route (sign-up for a user)
-router.get('/new', async(req, res, next) => {
-    try {
-        res.send("In user new");
-    }
-    catch(err) {
-        console.log("Error in user new: " + err);
-        return next();
-    }
+router.get('/new', (req, res) => {
+    res.render('./users/new.ejs');
 });
 
 // edit route (form for editing user info)
 router.get('/:id/edit', async(req, res, next) => {
     try {
-        res.send("In user edit");
+        const user = await db.User.findById(req.params.id)
+        res.render("./users/edit.ejs", {user: user});
     }
     catch(err) {
         console.log("Error in user edit: " + err);
@@ -42,7 +38,8 @@ router.get('/:id/edit', async(req, res, next) => {
 // show route
 router.get('/:id', async(req, res, next) => {
     try {
-        res.send("In user show");
+        const user = await db.User.findById(req.params.id).populate('parks').populate('badges');
+        res.render("./users/show.ejs", {user: user});
     }
     catch(err) {
         console.log("Error in user show: " + err);
@@ -53,10 +50,12 @@ router.get('/:id', async(req, res, next) => {
 // create route
 router.post('/', async(req, res, next) => {
     try {
-        res.send("In user post");
+        // TODO: Add password bcrypt stuff
+        let newUser = await db.User.create(req.body);
+        res.redirect(`/users/${newUser._id}`);
     }
     catch(err) {
-        console.log("Error in user post: " + err);
+        console.log("Error in user create (post): " + err);
         return next();
     }
 });
@@ -64,6 +63,8 @@ router.post('/', async(req, res, next) => {
 // put route (updates user info)
 router.put('/:id', async(req, res, next) => {
     try {
+        
+        let updatedUser = await db.User.findByIdAndUpdate({name: res.body.name, avatar: res.body.avatar, email: res.body.email});
         res.send("In user put");
     }
     catch(err) {
@@ -75,7 +76,8 @@ router.put('/:id', async(req, res, next) => {
 // delete route
 router.delete('/:id', async(req, res, next) => {
     try {
-        res.send("In user delete");
+        let deletedUser = await db.User.findByIdAndDelete(req.params.id);
+        res.redirect("/");
     }
     catch(err) {
         console.log("Error in delete put: " + err);
