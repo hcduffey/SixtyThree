@@ -39,7 +39,9 @@ router.get('/:id/edit', async(req, res, next) => {
 router.get('/:id', async(req, res, next) => {
     try {
         const user = await db.User.findById(req.params.id).populate('parks').populate('badges');
-        res.render("./users/show.ejs", {user: user});
+        let editOK = true; // This will be set if show :id === session user id
+
+        res.render("./users/show.ejs", {user: user, editOK: editOK});
     }
     catch(err) {
         console.log("Error in user show: " + err);
@@ -61,11 +63,17 @@ router.post('/', async(req, res, next) => {
 });
 
 // put route (updates user info)
-router.put('/:id', async(req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
+        if(req.body.password === '') {
+            let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email});
+        }
+        else {
+            //TODO: Add bcrypt stuff before updating password field
+            let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: res.body.avatar, email: req.body.email, password: req.body.password});
+        }
+        res.redirect(`/users/${req.params.id}`);
         
-        let updatedUser = await db.User.findByIdAndUpdate({name: res.body.name, avatar: res.body.avatar, email: res.body.email});
-        res.send("In user put");
     }
     catch(err) {
         console.log("Error in user put: " + err);
