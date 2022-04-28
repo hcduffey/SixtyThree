@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include( '../partials/head.ejs', { page: 'Edit User Profile'}) %>
-<body>
     
+<%- include( '../partials/head.ejs', { page: 'Edit User Profile'}) %>
+
+<body>
+    <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input name="name" type="text" value="<%= user.name %>">
+
+        <label for="email">E-mail Address</label>
+        <input name="email" type="email" value="<%= user.email %>">
+
+        <label for="password">Password</label>
+        <input name="password" type="password" size="30" placeholder="Leave blank to keep your same password">
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
