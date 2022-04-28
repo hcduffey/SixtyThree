@@ -1,6 +1,8 @@
 <nav>
     <% if(user) { %>
-        <%= user.name %> | 
+        <%= user.name %> | <a href="/logout">Logout</a> |
+    <% } else { %>
+        <a href="/login">Login</a> | <a href="/register">Register</a> |
     <% } %>
 
     <% if(routes) { %>
