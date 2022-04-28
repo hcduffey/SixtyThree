@@ -44,7 +44,8 @@ async function getAllParksAndSeed() {
                     long: parkData[i].longitude,
                     city: parkData[i].addresses[0].city,
                     state: parkData[i].addresses[0].stateCode,
-                    imageUrl: parkData[i].images[0].url
+                    imageUrl: parkData[i].images[0].url,
+                    description: parkData[i].description
                 }
 
                 let addedPark = await db.Park.create(newRecord);
@@ -83,8 +84,8 @@ async function seedBadgeNames() {
         console.log(err);
     }
 }
-
+getAllParksAndSeed()
 //getOnePark('acad');
-//clearDBAndSeeDB();
+// clearDBAndSeeDB();
 
 //seedBadgeNames();

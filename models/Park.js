@@ -34,6 +34,10 @@ const parkSchema = Schema({
         trim: true,
         required: [true, 'a park code is required for parks']
     },
+    description: {
+        type: String,
+        trim: true,
+    },
 }, {timestamps: true});
 
 const Park = mongoose.model("Park", parkSchema);
