@@ -23,8 +23,7 @@
 <% if (user.parks.length > 0) { %>
     <ul>
     <% for(let i=0; i < user.parks.length; i++) { %>
-       <%= user.parks[i] %> <%= allParks[0] %>
-           <li><a href="/parks/<%= allParks.indexOf(user.parks[i]) %>"><%= user.parks[i].name %></a></li>
+           <li><a href="/parks/<%= allParks.findIndex(park => park.name === user.parks[i].name) %>"><%= user.parks[i].name %></a></li>
     <% } %>
     </ul>
 <% } %>
