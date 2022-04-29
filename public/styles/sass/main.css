@@ -30,6 +30,8 @@ li {
 a {
   text-decoration: none;
   color: black;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 nav {
@@ -53,9 +55,16 @@ nav a {
   margin: 0 1em;
 }
 
-nav img {
+nav .navimage {
   margin: 0 .5em;
   height: 2.5em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navimage:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .userIndex {
@@ -102,5 +111,9 @@ nav img {
   height: 200px;
   margin: 1em;
   border-radius: 50%;
+}
+
+a:hover {
+  color: #ffe766;
 }
 /*# sourceMappingURL=main.css.map */
