@@ -45,6 +45,7 @@ app.use(function (req, res, next) {
 // app.use('/reviews', controllers.reviews) 
 app.use('/parks', controllers.parks);
 app.use('/users', controllers.users);
+app.use('/ratings', controllers.ratings)
 app.use('/', controllers.auth);
 
 // Home Route

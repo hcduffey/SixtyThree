@@ -25,7 +25,49 @@
         <h2>National Park</h2>
         <img src="<%= parks[id].imageUrl %>" alt="<%parks[id].name%> Image">
         <h3>ABOUT: <%= parks[id].description %></h3>
+        
+
+        <% if(currentUserId !== "") { %>
+
+            <form method="POST" action="/users/<%= currentUserId %>?_method=PUT">
+                <input value="<%= parks[id]._id %>" name="park" type="hidden">
+                <button type="submit">I've Been Here!</button>
+            </form>
+
+        <% } %>
+
         <img class="badge-image" id="badge-show<%id%>" src="<%= badges[id].avatar %>" alt="<%=badges[id].name%> Badge" />
-        <h3>REVIEWS: THIS PARK SUCKS 0/5</h3>
+
+        <% if(currentUserId !== "") { %>
+            <form action="/ratings" method="POST">
+                <legend>Rate this Park</legend>
+                <select name="rating" id="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                </select>
+                <textarea id="comment" name="comment" rows="5" cols="33"></textarea>
+                <input value="<%= parks[id]._id %>" name="park" type="hidden">
+                <button type="submit">Submit</button>
+            </form>
+        <% } %>
+        
+        <h3>REVIEWS</h3>
+        <% for(let i=0; i < ratings.length; i++) { %>
+            <p><%= ratings[i].comment %> <%= ratings[i].rating %></p>
+            <p><%= ratings[i].user.name %></p>
+            
+            <% if(currentUserId == ratings[i].user._id) { %>
+
+                <form method="POST" action="/ratings/<%= ratings[i]._id %>?_method=DELETE">
+                    <input value="<%= parks[id]._id %>" name="park" type="hidden">
+                    <button type="submit">Delete Review</button>
+                </form>
+
+            <% } %>
+            <hr>
+        <% } %>
 </body>
 </html>

@@ -23,7 +23,14 @@ router.get('/:id', async(req, res, next) => {
         id = req.params.id
         const badges = await db.Badge.find({})
         const parks = await db.Park.find({})
-        const context = {parks: parks, badges: badges}
+        const ratings = await db.Rating.find({park: parks[id]._id}).populate('user');
+
+        let currentUserId = "";
+        if(req.session && req.session.currentUser) {
+            currentUserId = req.session.currentUser.id;
+        }
+
+        const context = {parks: parks, badges: badges, ratings: ratings, currentUserId: currentUserId}
         res.render('parks_show.ejs', context)
     }
     catch(err) {

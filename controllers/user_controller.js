@@ -45,6 +45,7 @@ router.get('/:id/edit', async(req, res, next) => {
 router.get('/:id', async(req, res, next) => {
     try {
         const user = await db.User.findById(req.params.id).populate('parks').populate('badges');
+        const allParks = await db.Park.find({});
         let editOK = false;
 
         // a user should only be able to edit their own profile
@@ -54,7 +55,7 @@ router.get('/:id', async(req, res, next) => {
             }
         }
 
-        res.render("./users/show.ejs", {user: user, editOK: editOK});
+        res.render("./users/show.ejs", {user: user, editOK: editOK, allParks: allParks});
     }
     catch(err) {
         console.log("Error in user show: " + err);
@@ -67,19 +68,28 @@ router.put('/:id', async (req, res, next) => {
     try {
         if(req.session.currentUser) {
             if(req.session.currentUser.id === req.params.id) {
-                if(req.body.password === '') {
-                    let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email});
+                if(req.body.park) {
+                    let parktoAdd = await db.Park.findById(req.body.park);
+                    let usertoUpdate = await db.User.findById(req.session.currentUser.id);
+                    usertoUpdate.parks.push(parktoAdd);
+                    usertoUpdate.save();
                 }
                 else {
-                    const salt = await bcrypt.genSalt(12);
-                    const hash = await bcrypt.hash(req.body.password, salt);
-                    req.body.password = hash;
-                    let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email, password: req.body.password});
+                    if(req.body.password === '') {
+                        let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email});
+                    }
+                    else {
+                        const salt = await bcrypt.genSalt(12);
+                        const hash = await bcrypt.hash(req.body.password, salt);
+                        req.body.password = hash;
+                        let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email, password: req.body.password});
+                    }
                 }
-                res.redirect(`/users/${req.params.id}`);
+                
+                res.redirect('back');
             }
             else {
-                res.redirect(`/users/${req.params.id}`);
+                res.redirect('back');
             }
         }
         else {
