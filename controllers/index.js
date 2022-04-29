@@ -2,7 +2,7 @@
 // require('../models')
 
 module.exports = {
-    reviews: require('./reviews_controller'),
+    ratings: require('./rating_controller'),
     parks: require('./park_controller'),
     users: require('./user_controller'),
     auth: require('./auth_controller')
