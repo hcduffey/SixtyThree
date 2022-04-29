@@ -1,4 +1,5 @@
 const express = require('express')
+const bcrypt = require('bcryptjs');
 const router = express.Router()
 
 const db = require('../models')
@@ -18,16 +19,21 @@ router.get('/', async(req, res, next) => {
     }
 });
 
-// new route (sign-up for a user)
-router.get('/new', (req, res) => {
-    res.render('./users/new.ejs');
-});
-
 // edit route (form for editing user info)
 router.get('/:id/edit', async(req, res, next) => {
     try {
         const user = await db.User.findById(req.params.id)
-        res.render("./users/edit.ejs", {user: user});
+        if(req.session.currentUser) {
+            if(req.session.currentUser.id === req.params.id) {
+                res.render("./users/edit.ejs", {user: user});
+            }
+            else {
+                res.redirect(`/users/${req.params.id}`);
+            }
+        }
+        else {
+            res.redirect('/');
+        }
     }
     catch(err) {
         console.log("Error in user edit: " + err);
@@ -39,7 +45,16 @@ router.get('/:id/edit', async(req, res, next) => {
 router.get('/:id', async(req, res, next) => {
     try {
         const user = await db.User.findById(req.params.id).populate('parks').populate('badges');
-        res.render("./users/show.ejs", {user: user});
+        let editOK = false;
+
+        // a user should only be able to edit their own profile
+        if(req.session.currentUser) {
+            if(req.session.currentUser.id === req.params.id) {
+                editOK = true; 
+            }
+        }
+
+        res.render("./users/show.ejs", {user: user, editOK: editOK});
     }
     catch(err) {
         console.log("Error in user show: " + err);
@@ -47,25 +62,29 @@ router.get('/:id', async(req, res, next) => {
     }
 });
 
-// create route
-router.post('/', async(req, res, next) => {
-    try {
-        // TODO: Add password bcrypt stuff
-        let newUser = await db.User.create(req.body);
-        res.redirect(`/users/${newUser._id}`);
-    }
-    catch(err) {
-        console.log("Error in user create (post): " + err);
-        return next();
-    }
-});
-
 // put route (updates user info)
-router.put('/:id', async(req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
-        
-        let updatedUser = await db.User.findByIdAndUpdate({name: res.body.name, avatar: res.body.avatar, email: res.body.email});
-        res.send("In user put");
+        if(req.session.currentUser) {
+            if(req.session.currentUser.id === req.params.id) {
+                if(req.body.password === '') {
+                    let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email});
+                }
+                else {
+                    const salt = await bcrypt.genSalt(12);
+                    const hash = await bcrypt.hash(req.body.password, salt);
+                    req.body.password = hash;
+                    let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email, password: req.body.password});
+                }
+                res.redirect(`/users/${req.params.id}`);
+            }
+            else {
+                res.redirect(`/users/${req.params.id}`);
+            }
+        }
+        else {
+            res.redirect('/');
+        }
     }
     catch(err) {
         console.log("Error in user put: " + err);
@@ -76,8 +95,18 @@ router.put('/:id', async(req, res, next) => {
 // delete route
 router.delete('/:id', async(req, res, next) => {
     try {
-        let deletedUser = await db.User.findByIdAndDelete(req.params.id);
-        res.redirect("/");
+        if(req.session.currentUser) {
+            if(req.session.currentUser.id === req.params.id) {
+                let deletedUser = await db.User.findByIdAndDelete(req.params.id);
+                res.redirect("/");
+            }
+            else {
+                res.redirect(`/users/${req.params.id}`);
+            }
+        }
+        else {
+            res.redirect('/');
+        }
     }
     catch(err) {
         console.log("Error in delete put: " + err);

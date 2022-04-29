@@ -8,7 +8,6 @@ const db = require('../models')
 router.get('/', async(req, res, next) => {
     try {
         const badges = await db.Badge.find({})
-        console.log(badges)
         const context = {badges: badges}
         res.render('parks.ejs', context)
     }
@@ -21,7 +20,11 @@ router.get('/', async(req, res, next) => {
 // show route
 router.get('/:id', async(req, res, next) => {
     try {
-        res.send("In park show");
+        id = req.params.id
+        const badges = await db.Badge.find({})
+        const parks = await db.Park.find({})
+        const context = {parks: parks, badges: badges}
+        res.render('parks_show.ejs', context)
     }
     catch(err) {
         console.log("Error in park show: " + err);

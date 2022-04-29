@@ -3,8 +3,14 @@
 <%- include('../partials/head.ejs', { page: 'Profile'}) %>
 <body>
 
+<%- include('../partials/nav.ejs') %>
+
 <h2><%= user.name %></h2>
 <h3><%= user.email %></h3>
+
+<% if(editOK) { %>
+       <a href="/users/<%= user._id %>/edit">Edit Profile</a>
+<% } %>
 
 <h1>Badges</h1>
 <% if (user.badges.length > 0) { %>

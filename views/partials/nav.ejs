@@ -1,0 +1,15 @@
+<nav>
+    <% if(user) { %>
+        <%= user.name %> | <a href="/logout">Logout</a> |
+    <% } else { %>
+        <a href="/login">Login</a> | <a href="/register">Register</a> |
+    <% } %>
+
+    <% if(routes) { %>
+        <% routes.forEach((route) => { %>
+
+            <a href="<%= route.href %>"><%= route.title %></a>
+
+        <% }); %>
+    <% } %>
+</nav>
