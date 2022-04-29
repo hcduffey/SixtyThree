@@ -92,7 +92,6 @@ nav .navimage {
   left: 0;
   height: 100vh;
   width: 100vw;
-  z-index: 1;
   overflow: auto;
   display: null;
   z-index: 2;
@@ -129,8 +128,8 @@ nav .navimage {
 
 #modal-textbox .mountain {
   position: absolute;
-  top: 11em;
-  height: 30em;
+  top: 20em;
+  height: 14em;
   margin: 0;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
@@ -146,6 +145,7 @@ nav .navimage {
   border: 0.2em solid #D0D6B3;
   border-radius: .2em;
   padding: .2em;
+  z-index: 2;
 }
 
 #close:hover {
