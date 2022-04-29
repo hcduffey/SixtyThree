@@ -4,6 +4,14 @@ const router = express.Router();
 
 const db = require('../models');
 
+router.get('/home', (req, res) => {
+    if(req.session && req.session.currentUser) {
+        res.redirect(`/users/${req.session.currentUser.id}`);
+    }
+    else {
+        res.redirect('/');
+    }
+});
 
 router.get('/login', (req, res) => {
     res.render('auth/login.ejs');
