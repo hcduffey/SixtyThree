@@ -36,7 +36,7 @@ app.use(navLinks);
 
 /* SECTION Middleware */
 app.use(function (req, res, next) {
-    res.locals.user = req.session.currentUser;
+    res.locals.navBarUser = req.session.currentUser;
     next();
 });
 
