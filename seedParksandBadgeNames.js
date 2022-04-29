@@ -77,7 +77,8 @@ async function seedBadgeNames() {
         let parks = await db.Park.find({});
 
         for(let i = 0; i < parks.length; i++){
-            let newBadge = await db.Badge.create({name: parks[i].name, avatar: "changeme"});
+            //console.log(`/images/Badges/${parks[i].name.replace(/ /g, "_")}_National_Park_.png`);
+            let newBadge = await db.Badge.create({name: parks[i].name, avatar:`/images/Badges/${parks[i].name.replace(/ /g, "_")}_National_Park_.png`});
         }
     }
     catch(err) {
@@ -85,7 +86,19 @@ async function seedBadgeNames() {
     }
 }
 
+async function clearBadgeDB() {
+    try {
+        let clearedBadges = await db.Badge.deleteMany({});
+        console.info(clearedBadges);
+        //await seedBadgeNames();
+    }
+    catch(err) {
+        console.err("error in clearing parks collection: " + err);
+    }
+}
+
 //getOnePark('acad');
 // clearDBAndSeeDB();
 
-//seedBadgeNames();
+//clearBadgeDB();
+seedBadgeNames();

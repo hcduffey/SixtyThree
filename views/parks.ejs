@@ -14,7 +14,7 @@
     <div class="container">
         <h1>National Parks</h1>
         <% for(let i=0; i < badges.length; i++){ %>
-                    <a href="/parks/<%= i %>"><img class="badge-image" id="badge <% i %>" src="../images/badges/<%=badges[i].name%> National Park .png" alt="<%=badges[i].name%> Image" /></a>
+                    <a href="/parks/<%= i %>"><img class="badge-image" id="badge <% i %>" src="<%=badges[i].avatar%>" alt="<%=badges[i].name%> Image" /></a>
                         <h3><a href="/parks/<%= i %>"><%= badges[i].name %></a></h3>
         <%  }   %>
     </div>
