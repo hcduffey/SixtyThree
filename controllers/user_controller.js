@@ -70,8 +70,10 @@ router.put('/:id', async (req, res, next) => {
             if(req.session.currentUser.id === req.params.id) {
                 if(req.body.park) {
                     let parktoAdd = await db.Park.findById(req.body.park);
+                    let badgetoAdd = await db.Badge.findOne({name: parktoAdd.name});
                     let usertoUpdate = await db.User.findById(req.session.currentUser.id);
                     usertoUpdate.parks.push(parktoAdd);
+                    usertoUpdate.badges.push(badgetoAdd);
                     usertoUpdate.save();
                 }
                 else {
