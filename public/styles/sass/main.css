@@ -1,3 +1,21 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -65,6 +83,76 @@ nav .navimage {
 .navimage:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#modal {
+  background-color: #143109;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  overflow: auto;
+  display: null;
+  z-index: 2;
+}
+
+#modal-textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #143109;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#modal-textbox img {
+  height: 10em;
+}
+
+#modal-textbox .mountain {
+  position: absolute;
+  top: 11em;
+  height: 30em;
+  margin: 0;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  border-radius: 50%;
+}
+
+#modal-textbox a {
+  color: #D0D6B3;
+  font-size: 2em;
+  margin: 1em;
+  border: 0.2em solid #D0D6B3;
+  border-radius: .2em;
+  padding: .2em;
+}
+
+#close:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: #D0D6B3;
+  color: #143109;
 }
 
 .userIndex {
