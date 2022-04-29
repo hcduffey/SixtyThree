@@ -6,8 +6,8 @@
     padding: 2em;
     justify-content: center;
     align-items: center;
-    background:$primary-color;
-
+    background: $primary-color;
+   
     .userList{
         display: flex;
         justify-content: center;
@@ -19,7 +19,7 @@
         text-align: center;
     }
     a{
-        color: #D0D6B3;
+        color: $secondary-color;
     }
 
     img{

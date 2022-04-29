@@ -32,6 +32,32 @@ a {
   color: black;
 }
 
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(20, 49, 9, 0.7);
+  color: #D0D6B3;
+  height: 75px;
+}
+
+nav a {
+  color: #D0D6B3;
+  font-size: 2em;
+  margin: 0 1em;
+}
+
+nav img {
+  margin: 0 .5em;
+  height: 2.5em;
+}
+
 .userIndex {
   display: -webkit-box;
   display: -ms-flexbox;
