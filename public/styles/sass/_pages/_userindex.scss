@@ -1,0 +1,31 @@
+.userIndex{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+    background:$primary-color;
+
+    .userList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    } 
+
+    li{
+        margin: 1em;
+        text-align: center;
+    }
+    a{
+        color: #D0D6B3;
+    }
+
+    img{
+        height: 200px;
+        margin: 1em;
+        border-radius: 50%;
+    }
+}
+
