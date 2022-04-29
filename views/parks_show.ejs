@@ -29,10 +29,14 @@
 
         <% if(currentUserId !== "") { %>
 
-            <form method="POST" action="/users/<%= currentUserId %>?_method=PUT">
-                <input value="<%= parks[id]._id %>" name="park" type="hidden">
-                <button type="submit">I've Been Here!</button>
-            </form>
+            <% if(beenToPark) { %>
+                <p>You've been here!</p>
+            <% } else { %>
+                <form method="POST" action="/users/<%= currentUserId %>?_method=PUT">
+                    <input value="<%= parks[id]._id %>" name="park" type="hidden">
+                    <button type="submit">I've Been Here!</button>
+                </form>
+            <% } %>
 
         <% } %>
 
