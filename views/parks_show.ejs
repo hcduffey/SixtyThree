@@ -42,19 +42,22 @@
 
         <img class="badge-image" id="badge-show<%id%>" src="<%= badges[id].avatar %>" alt="<%=badges[id].name%> Badge" />
 
-        <% if(currentUserId !== "") { %>
+        <% if(currentUserId !== "" && beenToPark) { %>
             <form action="/ratings" method="POST">
                 <legend>Rate this Park</legend>
-                <select name="rating" id="rating">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5" selected>5</option>
-                </select>
-                <textarea id="comment" name="comment" rows="5" cols="33"></textarea>
-                <input value="<%= parks[id]._id %>" name="park" type="hidden">
-                <button type="submit">Submit</button>
+                <fieldset>
+                    <select name="rating" id="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" selected>5</option>
+                    </select>
+                    <textarea id="comment" name="comment" rows="5" cols="33"></textarea>
+                    <input value="<%= parks[id]._id %>" name="park" type="hidden">
+                
+                    <button type="submit">Submit</button>
+                </fieldset>
             </form>
         <% } %>
         
