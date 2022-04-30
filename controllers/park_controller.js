@@ -10,7 +10,7 @@ router.get('/', async(req, res, next) => {
     try {
         const badges = await db.Badge.find({})
         const context = {badges: badges}
-        res.render('parks.ejs', context)
+        res.render('./parks/index.ejs', context)
     }
     catch(err) {
         console.log("Error in park index: " + err);
@@ -40,7 +40,7 @@ router.get('/:id', async(req, res, next) => {
         }
 
         const context = {parks: parks, badges: badges, ratings: ratings, currentUserId: currentUserId, id:id, beenToPark: beenToPark}
-        res.render('parks_show.ejs', context)
+        res.render('./parks/show.ejs', context)
     }
     catch(err) {
         console.log("Error in park show: " + err);
