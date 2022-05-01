@@ -10,6 +10,8 @@ const app = express();
 const routes = require('./navLinks');
 const navLinks = require('./navLinks');
 
+const { flash } = require('express-flash-message');
+
 require('./config/db.connection');
 
 app.set('view engine', 'ejs')
@@ -38,6 +40,9 @@ app.use(function (req, res, next) {
     res.locals.navBarUser = req.session.currentUser;
     next();
 });
+
+// apply express-flash-message middleware
+app.use(flash({ sessionKeyName: 'flashMessage' }));
 
 // Controllers
 // EXAMPLES: app.use('/products', controllers.products) 

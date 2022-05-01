@@ -320,6 +320,12 @@ a:hover {
   color: #ffe766;
 }
 
+#flash-message {
+  color: red;
+  font-size: 1.5em;
+  display: block;
+}
+
 #login-container {
   background-color: #143109;
   display: -webkit-box;
