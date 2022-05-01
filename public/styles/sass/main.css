@@ -16,6 +16,24 @@
   }
 }
 
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+  }
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -87,6 +105,10 @@ nav .navimage {
 .navimage:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+body {
+  background: #143109;
 }
 
 #modal {
@@ -173,39 +195,48 @@ nav .navimage {
 }
 
 .homeAbout .info1 {
-  background: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background: url("https://images.pexels.com/photos/8947305/pexels-photo-8947305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-position: top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   width: 100%;
-  min-height: 25%;
+  min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
+  -webkit-animation-name: null;
+          animation-name: null;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 .homeAbout .info2 {
   background: url("https://images.pexels.com/photos/63553/pexels-photo-63553.jpeg");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   width: 100%;
-  min-height: 25%;
+  min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
+  -webkit-animation-name: null;
+          animation-name: null;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 .homeAbout .info3 {
   background: url("https://images.pexels.com/photos/248820/pexels-photo-248820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   width: 100%;
-  min-height: 25%;
+  min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
+  -webkit-animation-name: null;
+          animation-name: null;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 .infoText1 {
@@ -221,8 +252,22 @@ nav .navimage {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #D0D6B3;
   height: 100%;
+}
+
+.infoText1 a {
+  color: #D0D6B3;
+  border: 0.2em solid #D0D6B3;
+  border-radius: .2em;
+  padding: .2em;
+}
+
+.infoText1 a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: #D0D6B3;
+  color: #143109;
 }
 
 .userIndex {

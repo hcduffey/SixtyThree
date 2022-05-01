@@ -19,4 +19,15 @@ $base-transition:  all 0.5s ease;
   
   }
 
+  @keyframes slideIn {
+    0% { 
+        transform: translateX(-100%);
+        
+     }
   
+  
+    100% {
+        
+     }
+  
+  }
