@@ -2,7 +2,6 @@
 <html lang="en">
 <%- include( '../partials/head.ejs', { page: 'Register'}) %>
 <body>
-    
     <div id="login-container">
         <div id="login-form">
           <h3>Login</h3>
@@ -37,6 +36,9 @@
               </div>
             </div>
             <a href="/register">Sign up to create an account</a>
+            <% if(message) { %>
+                <span id="flash-message"><%= message %></span>
+            <% } %>
           </form>
         </div>
     

@@ -4,6 +4,12 @@ const router = express.Router();
 
 const db = require('../models');
 
+router.get('/flash', async function (req, res) {
+    // Set a flash message by passing the key, followed by the value, to req.flash().
+    await req.flash('bad-login', 'Bad username or password. Try again.');
+    res.redirect('/login');
+});
+
 router.get('/home', (req, res) => {
     if(req.session && req.session.currentUser) {
         res.redirect(`/users/${req.session.currentUser.id}`);
@@ -13,8 +19,10 @@ router.get('/home', (req, res) => {
     }
 });
 
-router.get('/login', (req, res) => {
-    res.render('auth/login.ejs');
+router.get('/login', async(req, res) => {
+    const message = await req.consumeFlash('bad-login');
+
+    res.render('auth/login.ejs', {message: message});
 });
 
 router.post('/login', async (req, res, next) => {
@@ -22,13 +30,13 @@ router.post('/login', async (req, res, next) => {
         // Make sure user exists in our database
         const foundUser = await db.User.findOne({email: req.body.email});
         if(!foundUser) {
-            return res.redirect('/register');
+            return res.redirect('/flash');
         }
 
         // check if submitted password === stored password
         const match = await bcrypt.compare(req.body.password, foundUser.password);
         if(!match) { 
-            return res.redirect('/register');
+            return res.redirect('/flash');
         }
 
         // if login is successful, create a session
