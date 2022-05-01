@@ -1,10 +1,4 @@
-#flash-message {
-    color: blue;
-    font-size: 1.5em;
-    display: block;
-}
-
-#login-container {
+#register-container {
 	background-color: $primary-color;
     display: flex; 
     align-items: center;
@@ -12,7 +6,7 @@
     width: 100vw;
     height: 100vh;
 
-    #login-form {
+    #register-form {
         background-color: $secondary-color;
         border-radius: 10px;
         text-align: center;

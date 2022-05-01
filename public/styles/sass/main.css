@@ -371,6 +371,15 @@ a:hover {
   color: #ffe766;
 }
 
+
+
+#flash-message {
+  color: blue;
+  font-size: 1.5em;
+  display: block;
+}
+
+
 #login-container {
   background-color: #143109;
   display: -webkit-box;
@@ -447,6 +456,88 @@ a:hover {
 }
 
 #login-container #login-form form #submit button:hover {
+  background-color: #D0D6B3;
+  /* Green */
+  color: #143109;
+  border: 0.2em solid #143109;
+}
+
+#register-container {
+  background-color: #143109;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#register-container #register-form {
+  background-color: #D0D6B3;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+#register-container #register-form form {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#register-container #register-form form label, #register-container #register-form form input {
+  font-size: 2em;
+}
+
+#register-container #register-form form h3 {
+  color: #143109;
+}
+
+#register-container #register-form form .control {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #143109;
+}
+
+#register-container #register-form form #submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#register-container #register-form form #submit button {
+  background-color: #143109;
+  color: #D0D6B3;
+  font-size: 2em;
+  margin: 1em;
+  border: 0.2em solid #D0D6B3;
+  border-radius: .2em;
+  padding: .2em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#register-container #register-form form #submit button:hover {
   background-color: #D0D6B3;
   /* Green */
   color: #143109;
