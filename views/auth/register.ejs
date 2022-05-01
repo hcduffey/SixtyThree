@@ -2,17 +2,55 @@
 <html lang="en">
 <%- include( '../partials/head.ejs', { page: 'Register'}) %>
 <body>
-    <form action="/register" method="POST">
-        <label for="name">Name</label>
-        <input name="name" type="text">
-
-        <label for="email">E-mail Address</label>
-        <input name="email" type="email">
-
-        <label for="password">Password</label>
-        <input name="password" type="password">
-
-        <button type="submit">Submit</button>
-    </form>
+    <div id="register-container">
+        <div id="register-form">
+          <h3>Register</h3>
+          <form action="/register" method="POST">
+            <div id="input-group">
+                <div class="field">
+                <label class="label">Name:</label>
+                <div class="control">
+                    <input
+                    name="name"
+                    class="input"
+                    type="text"
+                    required
+                    />
+                </div>
+                </div>
+                <div class="field">
+                <label class="label">Email:</label>
+                <div class="control">
+                    <input
+                    name="email"
+                    class="input"
+                    type="email"
+                    placeholder="example@domain.com"
+                    required
+                    />
+                </div>
+                </div>
+                <div class="field">
+                <label class="label">Password:</label>
+                <div class="control">
+                    <input
+                    name="password"
+                    class="input"
+                    type="password"
+                    placeholder="******"
+                    required
+                    />
+                </div>
+                </div>
+            </div>
+            <div id="submit">
+              <div class="control">
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+            <a href="/login">Already have an account? Login</a>
+          </form>
+        </div>
+    </div>
 </body>
 </html>

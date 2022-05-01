@@ -1,0 +1,62 @@
+#register-container {
+	background-color: $primary-color;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    #register-form {
+        background-color: $secondary-color;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+
+        form {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            label, input {
+                font-size: 2em;
+            }
+
+            h3 {
+                color: $primary-color;
+            }
+     
+            .control {
+                margin-top: 10px;
+                margin-bottom: 5px;
+                display: inline-block;
+                color: $primary-color
+            }
+
+            #submit {
+                display: flex;
+                align-items: center;
+
+                button {
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    font-size: 2em;
+                    margin: 1em;
+                    border: .2em solid $secondary-color;
+                    border-radius: .2em;
+                    padding: .2em;
+                    transition: $base-transition;
+                }
+                  
+                button:hover {
+                    background-color: $secondary-color; /* Green */
+                    color: $primary-color;
+                    border: .2em solid $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
