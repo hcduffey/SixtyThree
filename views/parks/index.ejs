@@ -3,20 +3,14 @@
     <%- include( '../partials/head.ejs', { page: 'National Parks'}) %> 
 <body>
     <%- include('../partials/nav.ejs') %>
-<style>
-    .container {
-        background-color: gray;
-    }
-    .badge-image {
-        max-width: 100px;
-    }
-</style>
     <div class="container">
         <h1>National Parks</h1>
+        <ul class="parkList">
         <% for(let i=0; i < badges.length; i++){ %>
-                    <a href="/parks/<%= i %>"><img class="badge-image" id="badge <% i %>" src="<%=badges[i].avatar%>" alt="<%=badges[i].name%> Image" /></a>
-                        <h3><a href="/parks/<%= i %>"><%= badges[i].name %></a></h3>
+                    <li><a href="/parks/<%= i %>"><img class="badge-image" id="badge <% i %>" src="<%=badges[i].avatar%>" alt="<%=badges[i].name%> Image" /><a class="badgeName" href="/parks/<%= i %>"><%= badges[i].name %></a></a></li>
+                        
         <%  }   %>
+        </ul>
     </div>
 </body>
 </html>
