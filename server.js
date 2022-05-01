@@ -6,7 +6,6 @@ const MongoStore = require('connect-mongo');
 
 const controllers = require('./controllers')
 const app = express();
-const PORT = 4000;
 
 const routes = require('./navLinks');
 const navLinks = require('./navLinks');
@@ -52,4 +51,4 @@ app.use('/', controllers.auth);
 app.get('/', (request, response) => response.render('index.ejs'));
 
 // Express Server: initializes the server; app.listen allows your computer to receive requests at http://localhost:4000/ 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+app.listen(process.env.PORT || 3000, () => console.log(`Listening on port: ${PORT}`))
