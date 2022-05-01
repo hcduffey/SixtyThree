@@ -52,6 +52,10 @@ a {
   transition: all 0.5s ease;
 }
 
+h3 {
+  font-size: 8em;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,8 +122,8 @@ nav .navimage {
   padding: 10px;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 #modal-textbox img {
@@ -127,14 +131,9 @@ nav .navimage {
 }
 
 #modal-textbox .mountain {
-  position: absolute;
   top: 20em;
   height: 14em;
   margin: 0;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
   border-radius: 50%;
 }
 
@@ -153,6 +152,77 @@ nav .navimage {
           transform: scale(1.2);
   background: #D0D6B3;
   color: #143109;
+}
+
+.homeAbout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #143109;
+  height: 100vh;
+}
+
+.homeAbout .info1 {
+  background: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 25%;
+  margin: 1em 0;
+  overflow: hidden;
+}
+
+.homeAbout .info2 {
+  background: url("https://images.pexels.com/photos/63553/pexels-photo-63553.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 25%;
+  margin: 1em 0;
+  overflow: hidden;
+}
+
+.homeAbout .info3 {
+  background: url("https://images.pexels.com/photos/248820/pexels-photo-248820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 25%;
+  margin: 1em 0;
+  overflow: hidden;
+}
+
+.infoText1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
 }
 
 .userIndex {
