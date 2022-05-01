@@ -1,3 +1,6 @@
+body{
+    background: $primary-color;
+}
 #modal {
 	background-color: $primary-color;
 	position: fixed;
@@ -48,7 +51,6 @@
 }
 
 // end modal styling
-
 .homeAbout{
     display: flex;
     flex-direction: column;
@@ -57,40 +59,46 @@
     background:$primary-color;
     // width: 100vw;
     height: 100vh;
-    
     .info1{
-    background: url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background: url('https://images.pexels.com/photos/8947305/pexels-photo-8947305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-position: top;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    min-height: 25%;
+    min-height: 30%;
     margin:1em 0;  
     overflow: hidden; 
+    animation-name: null;
+    animation-duration: 3s;
     }
     .info2{
     background: url('https://images.pexels.com/photos/63553/pexels-photo-63553.jpeg');
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    min-height: 25%;
+    min-height: 30%;
     margin:1em 0;  
     overflow: hidden; 
+    animation-name: null;
+    animation-duration: 4s;
     }
     .info3{
     background: url('https://images.pexels.com/photos/248820/pexels-photo-248820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    min-height: 25%;
+    min-height: 30%;
     margin:1em 0; 
     overflow: hidden; 
+    animation-name: null;
+    animation-duration: 5s;
     }
+    
 }
 .infoText1{
     display: flex;
@@ -98,9 +106,21 @@
     align-items: center;
     flex-wrap: wrap;
     background-color: rgba(0,0,0, 0.5); 
-    color: white;
+    color: $secondary-color;
     height: 100%;
     
+    a{
+        color: $secondary-color;
+        border: .2em solid $secondary-color;
+        border-radius: .2em;
+        padding: .2em;
+        
+    }
+    a:hover{
+        transform: scale(1.2);
+        background: $secondary-color;
+        color: $primary-color;
+    }
 }
 
 
