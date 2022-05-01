@@ -51,4 +51,4 @@ app.use('/', controllers.auth);
 app.get('/', (request, response) => response.render('index.ejs'));
 
 // Express Server: initializes the server; app.listen allows your computer to receive requests at http://localhost:4000/ 
-app.listen(process.env.PORT || 4000, () => console.log(`Listening on port: ${PORT}`))
+app.listen(process.env.PORT || 4000);
