@@ -21,17 +21,14 @@
     text-align: center;
     padding: 10px;
     animation-name: fadeIn;
-    animation-duration: 3s;
+    animation-duration: 5s;
     img{
         height: 10em;
     }
     .mountain{
-        position: absolute;
         top: 20em;
         height: 14em;
         margin: 0;
-        animation-name: fadeIn;
-        animation-duration: 7s;
         border-radius: 50%;
     }
     a{
@@ -49,4 +46,61 @@
     background: $secondary-color;
     color: $primary-color;
 }
+
+// end modal styling
+
+.homeAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:$primary-color;
+    // width: 100vw;
+    height: 100vh;
+    
+    .info1{
+    background: url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 25%;
+    margin:1em 0;  
+    overflow: hidden; 
+    }
+    .info2{
+    background: url('https://images.pexels.com/photos/63553/pexels-photo-63553.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 25%;
+    margin:1em 0;  
+    overflow: hidden; 
+    }
+    .info3{
+    background: url('https://images.pexels.com/photos/248820/pexels-photo-248820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 25%;
+    margin:1em 0; 
+    overflow: hidden; 
+    }
+}
+.infoText1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0,0,0, 0.5); 
+    color: white;
+    height: 100%;
+    
+}
+
 
