@@ -6,7 +6,16 @@ const db = require('../models');
 
 router.get('/flash', async function (req, res) {
     // Set a flash message by passing the key, followed by the value, to req.flash().
-    await req.flash('bad-login', 'Bad username or password. Try again.');
+    
+    if(req.headers.referer.endsWith("/login")) {
+        await req.flash('login-message', 'Bad username or password. Try again.');
+    }
+    else if(req.headers.referer.endsWith("/register")) {
+        await req.flash('login-message', 'Account successfully created. Please login.');
+    }
+
+    console.log(req.headers);
+    
     res.redirect('/login');
 });
 
@@ -20,7 +29,7 @@ router.get('/home', (req, res) => {
 });
 
 router.get('/login', async(req, res) => {
-    const message = await req.consumeFlash('bad-login');
+    const message = await req.consumeFlash('login-message');
 
     res.render('auth/login.ejs', {message: message});
 });
@@ -74,11 +83,11 @@ router.post('/register', async (req, res, next) => {
         // save them in the database a redirect to login page so they can login
         req.body.password = hash;
         const newUser = await db.User.create(req.body);
-        return res.redirect('/login');
+        return res.redirect('/flash');
     }
     catch(err) {
         console.log('Error in register post: ' + err);
-        res.redirect('/login');
+        res.redirect('/register');
     }
 });
 
