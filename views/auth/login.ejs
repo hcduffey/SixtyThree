@@ -2,14 +2,46 @@
 <html lang="en">
 <%- include( '../partials/head.ejs', { page: 'Register'}) %>
 <body>
-    <form action="/login" method="POST">
-        <label for="email">Username (Email)</label>
-        <input name="email" type="email">
+    
+    <div id="login-container">
+        <div id="login-form">
+          <h3>Login</h3>
+          <form action="/login" method="POST">
+            <div id="input-group">
+                <div class="field">
+                <label class="label">Email:</label>
+                <div class="control">
+                    <input
+                    name="email"
+                    class="input"
+                    type="email"
+                    placeholder="example@domain.com"
+                    />
+                </div>
+                </div>
+                <div class="field">
+                <label class="label">Password:</label>
+                <div class="control">
+                    <input
+                    name="password"
+                    class="input"
+                    type="password"
+                    placeholder="******"
+                    />
+                </div>
+                </div>
+            </div>
+            <div id="submit">
+              <div class="control">
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+            <a href="/register">Sign up to create an account</a>
+          </form>
+        </div>
+    
 
-        <label for="password">Password</label>
-        <input name="password" type="password">
-
-        <button type="submit">Submit</button>
-    </form>
+    </div>
+    
 </body>
 </html>
