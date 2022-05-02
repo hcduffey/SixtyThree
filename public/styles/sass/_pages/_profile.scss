@@ -6,11 +6,11 @@ div#user-show-container {
 
     div#user-show-top-row {
         width: 100vw;
-        height: 100vh;
         display: flex;
         
         div#user-show-avatar-container {
             width: fit-content;
+            height: fit-content;
 
             img#user-show-avatar {
                 height: 150px;

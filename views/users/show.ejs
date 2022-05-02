@@ -23,6 +23,13 @@
                      <% if (userReviews.length > 0) { %>
                             <% for(let i=0; i < userReviews.length; i++) { %>
                                   <%= userReviews[i].park.name %>
+                                  <br>
+                                  <% for(let j=0; j < userReviews[i].rating; j++) { %>
+                                   &#9734;
+                                  <% } %>
+                                  <br>
+                                  <q><%= userReviews[i].comment %></q>
+                                  <hr>
                             <% } %>
                      <% } %>
               </div>

@@ -350,7 +350,6 @@ div#user-show-container {
 
 div#user-show-container div#user-show-top-row {
   width: 100vw;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,6 +359,9 @@ div#user-show-container div#user-show-top-row div#user-show-avatar-container {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container img#user-show-avatar {
