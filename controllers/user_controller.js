@@ -23,16 +23,17 @@ router.get('/', async(req, res, next) => {
 router.get('/:id/edit', async(req, res, next) => {
     try {
         const user = await db.User.findById(req.params.id)
+        
         if(req.session.currentUser) {
             if(req.session.currentUser.id === req.params.id) {
-                res.render("./users/edit.ejs", {user: user});
+                return res.render("./users/edit.ejs", {user: user});
             }
             else {
-                res.redirect(`/users/${req.params.id}`);
+                return res.redirect(`/users/${req.params.id}`);
             }
         }
         else {
-            res.redirect('/');
+            return res.redirect('/');
         }
     }
     catch(err) {
@@ -85,16 +86,18 @@ router.put('/:id', async (req, res, next) => {
                 else {
                     if(req.body.password === '') {
                         let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email});
+                        req.session.currentUser.name = req.body.name;
                     }
                     else {
                         const salt = await bcrypt.genSalt(12);
                         const hash = await bcrypt.hash(req.body.password, salt);
                         req.body.password = hash;
                         let updatedUser = await db.User.findByIdAndUpdate(req.params.id, {name: req.body.name, avatar: req.body.avatar, email: req.body.email, password: req.body.password});
+                        req.session.currentUser.name = req.body.name;
                     }
                 }
                 
-                res.redirect('back');
+                res.redirect('/home');
             }
             else {
                 res.redirect('back');
