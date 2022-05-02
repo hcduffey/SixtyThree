@@ -46,6 +46,8 @@ router.get('/:id', async(req, res, next) => {
     try {
         const user = await db.User.findById(req.params.id).populate('parks').populate('badges');
         const allParks = await db.Park.find({});
+        const userReviews = await db.Rating.find({user: user._id}).populate('park');
+
         let editOK = false;
 
         // a user should only be able to edit their own profile
@@ -55,7 +57,7 @@ router.get('/:id', async(req, res, next) => {
             }
         }
 
-        res.render("./users/show.ejs", {user: user, editOK: editOK, allParks: allParks});
+        res.render("./users/show.ejs", {user: user, editOK: editOK, allParks: allParks, userReviews: userReviews});
     }
     catch(err) {
         console.log("Error in user show: " + err);
