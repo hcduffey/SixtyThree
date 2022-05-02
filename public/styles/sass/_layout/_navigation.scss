@@ -5,16 +5,20 @@ nav{
    background: transparentize($color: $primary-color, $amount: .3);
    color:$secondary-color;
    height: 75px;
+   text-shadow: .1em .1em .12em rgba(0, 0, 0, 0.33);
    
    a{
       color: $secondary-color; 
       font-size: 2em;
       margin: 0 1em;
    }
+
    .navimage{
        margin: 0 .5em;
        height: 2.5em;
        transition: $base-transition;
+       -webkit-filter: drop-shadow(2px 2px 5px rgba(34, 34, 34, 0.433));
+       filter: drop-shadow(2px 2px 3px rgba(34, 34, 34, 0.433));
        
    }
 }

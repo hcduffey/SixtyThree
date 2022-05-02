@@ -8,10 +8,12 @@
     align-items: center;
     background: $primary-color;
    h1{
-       font-size: 4em;
-       text-decoration: underline;
+       font-size: 7em;
+    //    text-decoration: underline;
        color: $secondary-color;
-   }
+       text-shadow: .1em .1em .12em rgba(0, 0, 0, 0.266);
+       margin: .5em 0 0 0;
+    }
     .parkList{
         display: flex;
         justify-content: center;
@@ -20,6 +22,7 @@
     li{
         margin: 1em;
         text-align: center;
+        text-shadow: .1em .1em .12em rgba(0, 0, 0, 0.33);
     }
     a{
         color: $secondary-color;
@@ -28,11 +31,18 @@
     img{
         height: 200px;
         margin: 1em;
-    
+        -webkit-filter: drop-shadow(2px 2px 5px rgba(34, 34, 34, 0.333));
+        filter: drop-shadow(2px 2px 10px rgba(34, 34, 34, 0.333));
     }
 }
 
 a:hover{
     color: $hover-color;
     
+}
+h1{
+    font-size: 7em;
+    color: $secondary-color;
+    text-shadow: .1em .1em .12em rgba(0, 0, 0, 0.266);
+    margin: .5em 0 0 0;
 }
