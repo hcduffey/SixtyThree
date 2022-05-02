@@ -161,20 +161,23 @@ nav .navimage {
 }
 
 #modal-textbox a {
-  color: #D0D6B3;
-  font-size: 2em;
+  color: white;
+  font-size: 2.5em;
   margin: 1em;
-  border: 0.2em solid #D0D6B3;
-  border-radius: .2em;
-  padding: .2em;
+  border: .25em solid white;
+  border-radius: .6em;
+  padding: .4em;
   z-index: 2;
+  text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.2);
 }
 
 #close:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background: #D0D6B3;
+  background: white;
   color: #143109;
+  text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.2);
+  font-weight: bold;
 }
 
 .homeAbout {
@@ -200,7 +203,7 @@ nav .navimage {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 85%;
   min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
@@ -208,6 +211,7 @@ nav .navimage {
           animation-name: null;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
+  border-radius: 3em;
 }
 
 .homeAbout .info2 {
@@ -215,7 +219,7 @@ nav .navimage {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 85%;
   min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
@@ -223,6 +227,7 @@ nav .navimage {
           animation-name: null;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
+  border-radius: 3em;
 }
 
 .homeAbout .info3 {
@@ -230,7 +235,7 @@ nav .navimage {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 85%;
   min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
@@ -238,6 +243,7 @@ nav .navimage {
           animation-name: null;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
+  border-radius: 3em;
 }
 
 .infoText1 {
@@ -252,23 +258,27 @@ nav .navimage {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #D0D6B3;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
   height: 100%;
+  padding-left: 3em;
+  text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.3);
 }
 
 .infoText1 a {
-  color: #D0D6B3;
-  border: 0.2em solid #D0D6B3;
   border-radius: .2em;
+  background: white;
+  color: #143109;
+  border: .15em solid white;
   padding: .2em;
 }
 
 .infoText1 a:hover {
+  border-radius: .4em;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background: #D0D6B3;
-  color: #143109;
+  color: white;
+  background: none;
 }
 
 .container {
