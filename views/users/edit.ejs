@@ -6,20 +6,42 @@
 <body>
     <%- include('../partials/nav.ejs') %>
 
-    <form action="/users/<%= user._id %>?_method=PUT" method="POST">
-        <label for="name">Name</label>
-        <input name="name" type="text" value="<%= user.name %>">
+    <div id="user-edit-container">
+        <div id="user-edit-top-row">
+               <div id="user-edit-avatar-container">
+                      <img id="user-edit-avatar" src="<%= user.avatar %>" alt="user avatar">
+               </div>
+               <div id="user-edit-name-container">
+                      <h3><%= user.name %></h3>
+               </div>
+        </div>
+        <div id="user-edit-bottom-row">
+            
+            <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+                <p>
+                    <label for="name">Name</label>
+                    <input name="name" type="text" value="<%= user.name %>">
+                </p>
 
-        <label for="email">E-mail Address</label>
-        <input name="email" type="email" value="<%= user.email %>">
+                <p>
+                    <label for="email">E-mail Address</label>
+                    <input name="email" type="email" value="<%= user.email %>">
+                </p>
+                <!-- TODO: Add avatar selection feature -->
+                <input name="avatar" type="hidden" value="<%= user.avatar %>">
+        
+                <p>
+                    <label for="password">Password</label>
+                    <input name="password" type="password" placeholder="Leave blank to keep your same password">
+                </p>
 
-        <!-- TODO: Add avatar selection feature -->
-        <input name="avatar" type="hidden" value="<%= user.avatar %>">
-
-        <label for="password">Password</label>
-        <input name="password" type="password" size="30" placeholder="Leave blank to keep current password">
-
-        <button type="submit">Submit</button>
-    </form>
+                <p>
+                    <button type="submit">Update</button>
+                    <a href='/home'>Cancel</a>
+                </p>
+            </form>
+            
+        </div>
+ </div>
 </body>
 </html>

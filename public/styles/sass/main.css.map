@@ -18,7 +18,8 @@
         "_pages/_profile.scss",
         "_pages/_userindex.scss",
         "_pages/_login.scss",
-        "_pages/_register.scss"
+        "_pages/_register.scss",
+        "_pages/_useredit.scss"
     ],
     "names": [],
     "file": "main.css"
