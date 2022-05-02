@@ -161,10 +161,10 @@ nav .navimage {
 }
 
 #modal-textbox a {
-  color: white;
+  color: #D0D6B3;
   font-size: 2.5em;
   margin: 1em;
-  border: .25em solid white;
+  border: 0.25em solid #D0D6B3;
   border-radius: .6em;
   padding: .4em;
   z-index: 2;
@@ -174,7 +174,7 @@ nav .navimage {
 #close:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background: white;
+  background: #D0D6B3;
   color: #143109;
   text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.2);
   font-weight: bold;
@@ -259,7 +259,7 @@ nav .navimage {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: white;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.22);
   height: 100%;
   padding-left: 3em;
   text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.3);
@@ -366,7 +366,7 @@ div#user-show-container div#user-show-top-row div#user-show-avatar-container {
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container img#user-show-avatar {
   height: 150px;
-  margin: 1em;
+  margin: 2em;
   border-radius: 20em;
 }
 
@@ -388,7 +388,7 @@ div#user-show-container div#user-show-top-row div#user-show-name-container {
 }
 
 div#user-show-container div#user-show-top-row div#user-show-name-container a {
-  font-size: 1.3em;
+  font-size: 2em;
 }
 
 div#user-show-container div#user-show-bottom-row {
@@ -400,11 +400,15 @@ div#user-show-container div#user-show-bottom-row {
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container {
   width: 50%;
+  border: solid black;
+  margin: 0 2em 0 2em;
+  padding: 0 1em 1em 1em;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #park-name {
   font-size: 3em;
   display: block;
+  margin: 0.5em 0 0 0;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-rating {
@@ -415,6 +419,7 @@ div#user-show-container div#user-show-bottom-row div#user-show-reviews-container
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-comment {
   font-size: 2em;
   display: inline;
+  margin: 0 1em 0 0;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container {
@@ -424,12 +429,15 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border: solid black;
+  margin: 0 2em 0 0;
+  padding: 0 1em 1em 1em;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container img.user-show-badge {
   max-height: 100px;
   max-width: 100px;
-  margin: 0em;
+  margin: 1.7em 0 0 0;
 }
 
 .userIndex {
