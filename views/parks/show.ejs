@@ -5,46 +5,45 @@
 
     <%- include('../partials/nav.ejs') %>
 
-    <div class="container">
-        <style>
-            h1, h2 {
-                text-align: center;
-                margin: auto;}
-            img {
-                max-width: 1000px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;}
-            .badge-image {
-                max-width: 150px;
-            }
-        </style>
+    <div class="containerPark">
+      <div class="parkAbout">
+          <div class="parkImageContainer">
+              <div class="imageText">
+                    <h1 class="parkName"> <%= parks[id].name %> </h1>
+                    <h2 >National Park</h2>
+                    <% if(currentUserId !== "") { %>
 
-        <h1> <%= parks[id].name %> </h1>
-        <h2>National Park</h2>
-        <img src="<%= parks[id].imageUrl %>" alt="<%parks[id].name%> Image">
-        <h3>ABOUT: <%= parks[id].description %></h3>
+                        <% if(beenToPark) { %>
+                            <p>You've been here! &#10004;</p>
+                        <% } else { %>
+                            <form method="POST" action="/users/<%= currentUserId %>?_method=PUT">
+                                <input value="<%= parks[id]._id %>" name="park" type="hidden">
+                                <button class="parkButton" type="submit">I've Been Here!</button>
+                            </form>
+                        <% } %>
+            
+                    <% } %>
+                                
+                    <h3 class="aboutText">ABOUT: <%= parks[id].description %></h3>
+                    <div class="parkBadge">
+                    <h2>Park Badge</h2>
+                    <img class="badge-image" id="badge-show<%id%>" src="<%= badges[id].avatar %>" alt="<%=badges[id].name%> Badge" />
+                    </div>
+              </div>
+                 <img class="parkImage"src="<%= parks[id].imageUrl %>" alt="<%parks[id].name%> Image">
+                 
+          </div>
+        
+      </div>
+
         
 
-        <% if(currentUserId !== "") { %>
-
-            <% if(beenToPark) { %>
-                <p>You've been here!</p>
-            <% } else { %>
-                <form method="POST" action="/users/<%= currentUserId %>?_method=PUT">
-                    <input value="<%= parks[id]._id %>" name="park" type="hidden">
-                    <button type="submit">I've Been Here!</button>
-                </form>
-            <% } %>
-
-        <% } %>
-
-        <img class="badge-image" id="badge-show<%id%>" src="<%= badges[id].avatar %>" alt="<%=badges[id].name%> Badge" />
-
+        
+      <div class="reviewSection">
+          <div class="reviewForm">
         <% if(currentUserId !== "" && beenToPark) { %>
-            <form action="/ratings" method="POST">
-                <legend>Rate this Park</legend>
+            <form class="reviewForm" action="/ratings" method="POST">
+                <legend><strong>Rate this Park</strong></legend>
                 <fieldset>
                     <select name="rating" id="rating">
                         <option value="1">1</option>
@@ -56,25 +55,29 @@
                     <textarea id="comment" name="comment" rows="5" cols="33"></textarea>
                     <input value="<%= parks[id]._id %>" name="park" type="hidden">
                 
-                    <button type="submit">Submit</button>
+                    <button class="submitButton"type="submit">Submit</button>
                 </fieldset>
             </form>
         <% } %>
-        
+    </div>
+    <div class="reviewComments">
         <h3>REVIEWS</h3>
         <% for(let i=0; i < ratings.length; i++) { %>
-            <p><%= ratings[i].comment %> <%= ratings[i].rating %></p>
+            <p><%= ratings[i].comment %> <%= ratings[i].rating %> &#9733</p>
             <p><%= ratings[i].user.name %></p>
             
             <% if(currentUserId == ratings[i].user._id) { %>
 
                 <form method="POST" action="/ratings/<%= ratings[i]._id %>?_method=DELETE">
                     <input value="<%= parks[id]._id %>" name="park" type="hidden">
-                    <button type="submit">Delete Review</button>
+                    <button class="deleteButton" type="submit">Delete Review</button>
                 </form>
 
             <% } %>
             <hr>
         <% } %>
+    </div>
+    </div>
+            </div>
 </body>
 </html>
