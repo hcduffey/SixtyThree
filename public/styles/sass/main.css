@@ -730,7 +730,6 @@ a:hover {
 }
 
 div#user-edit-container {
-  background-color: #143109;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -740,15 +739,21 @@ div#user-edit-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #143109;
+  text-shadow: 0.2em 0.3em 0.3em rgba(0, 0, 0, 0.08);
 }
 
 div#user-edit-container div#user-edit-top-row {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #143109;
-  color: #D0D6B3;
+  border: solid black;
+  margin: 1.5em 3em 0 1.5em;
+  padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+  border-radius: 14px;
 }
 
 div#user-edit-container div#user-edit-top-row div#user-edit-avatar-container {
@@ -766,17 +771,23 @@ div#user-edit-container div#user-edit-top-row div#user-edit-avatar-container img
 }
 
 div#user-edit-container div#user-edit-bottom-row {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 1em 0;
 }
 
 div#user-edit-container div#user-edit-bottom-row form {
-  color: #D0D6B3;
-  font-size: 1.5em;
+  border: solid black;
+  margin: 0 0.6em 0 1.5em;
+  padding: 1em 1.5em 1em 1.5em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
   display: table;
 }
 
@@ -786,14 +797,14 @@ div#user-edit-container div#user-edit-bottom-row form p {
 
 div#user-edit-container div#user-edit-bottom-row form label, div#user-edit-container div#user-edit-bottom-row form input {
   display: table-cell;
-  font-size: 1.2em;
+  font-size: 2em;
 }
 
 div#user-edit-container div#user-edit-bottom-row form button, div#user-edit-container div#user-edit-bottom-row form a {
   display: inline-block;
   background-color: #D0D6B3;
   color: #143109;
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 1em;
   border: 0.2em solid #143109;
   border-radius: .2em;
