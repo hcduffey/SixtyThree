@@ -48,6 +48,7 @@ router.get('/:id', async(req, res, next) => {
         const allParks = await db.Park.find({});
         const userReviews = await db.Rating.find({user: user._id}).populate('park');
 
+        console.log(userReviews);
         let editOK = false;
 
         // a user should only be able to edit their own profile
