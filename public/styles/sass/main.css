@@ -161,10 +161,10 @@ nav .navimage {
 }
 
 #modal-textbox a {
-  color: white;
+  color: #D0D6B3;
   font-size: 2.5em;
   margin: 1em;
-  border: .25em solid white;
+  border: 0.25em solid #D0D6B3;
   border-radius: .6em;
   padding: .4em;
   z-index: 2;
@@ -174,7 +174,7 @@ nav .navimage {
 #close:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background: white;
+  background: #D0D6B3;
   color: #143109;
   text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.2);
   font-weight: bold;
@@ -259,7 +259,7 @@ nav .navimage {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: white;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.22);
   height: 100%;
   padding-left: 3em;
   text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.3);
@@ -270,7 +270,8 @@ nav .navimage {
   background: white;
   color: #143109;
   border: .15em solid white;
-  padding: .2em;
+  margin: 0.22em;
+  padding: .15em;
 }
 
 .infoText1 a:hover {
@@ -525,13 +526,21 @@ div#user-show-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #143109;
+  text-shadow: 0.2em 0.3em 0.3em rgba(0, 0, 0, 0.08);
 }
 
 div#user-show-container div#user-show-top-row {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: solid black;
+  margin: 1.5em 3em 0 1.5em;
+  padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+  border-radius: 14px;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container {
@@ -545,7 +554,8 @@ div#user-show-container div#user-show-top-row div#user-show-avatar-container {
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container img#user-show-avatar {
   height: 150px;
-  margin: 1em;
+  margin: 2em 2em 2em 4em;
+  border-radius: 20em;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-name-container {
@@ -562,22 +572,95 @@ div#user-show-container div#user-show-top-row div#user-show-name-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 0.75em;
+  margin-top: 4em;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-name-container a {
-  font-size: 1.3em;
+  font-size: 2em;
 }
 
-div#user-show-container div#user-show-bottom-row {
+div#user-show-container div#user-show-top-row div#user-show-name-container a img {
+  display: inline;
+  max-width: 18px;
+  color: green;
+}
+
+div#user-show-container div#user-show-middle-row {
   width: 100vw;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+div#user-show-container div#user-show-middle-row #user-show-reviews-title-container {
+  width: 50%;
+  border: solid black;
+  margin: 1em .6em 0 1.5em;
+  padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+}
+
+div#user-show-container div#user-show-middle-row #user-show-reviews-title-container #reviews-title {
+  font-size: 3em;
+  display: block;
+  margin: 0.5em 0 0 0;
+}
+
+div#user-show-container div#user-show-middle-row #user-show-badges-title-container {
+  width: 50%;
+  border: solid black;
+  margin: 1em 3em 0 0.6em;
+  padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+}
+
+div#user-show-container div#user-show-middle-row #user-show-badges-title-container #badges-title {
+  font-size: 3em;
+  display: block;
+  margin: 0.5em 0 0 0;
+}
+
+div#user-show-container div#user-show-bottom-row {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0;
+}
+
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container {
   width: 50%;
+  border: solid black;
+  margin: 0 0.6em 0 1.5em;
+  padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+}
+
+div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #park-name {
+  font-size: 3em;
+  display: block;
+  margin: 0.5em 0 0 0;
+  text-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.1);
+}
+
+div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-rating {
+  font-size: 2em;
+  display: inline;
+  text-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.1);
+}
+
+div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-comment {
+  font-size: 2em;
+  display: inline;
+  margin: 0 1em 0 0;
+  text-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.1);
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container {
@@ -587,11 +670,20 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border: solid black;
+  margin: 0 3em 0 0.6em;
+  padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container img.user-show-badge {
-  height: 150px;
-  margin: 1em;
+  max-height: 100px;
+  max-width: 100px;
+  margin: 1.7em 0 0 0;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(2px 2px 5px rgba(34, 34, 34, 0.431));
 }
 
 .userIndex {
@@ -814,5 +906,103 @@ a:hover {
 
 #register-container #register-form form #already-signed-up {
   display: table-cell;
+}
+
+div#user-edit-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #143109;
+  text-shadow: 0.2em 0.3em 0.3em rgba(0, 0, 0, 0.08);
+}
+
+div#user-edit-container div#user-edit-top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  margin: 1.5em 3em 0 1.5em;
+  padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+  border-radius: 14px;
+}
+
+div#user-edit-container div#user-edit-top-row div#user-edit-avatar-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+div#user-edit-container div#user-edit-top-row div#user-edit-avatar-container img#user-edit-avatar {
+  height: 150px;
+  margin: 1em;
+}
+
+div#user-edit-container div#user-edit-bottom-row {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em 0;
+}
+
+div#user-edit-container div#user-edit-bottom-row form {
+  border: solid black;
+  margin: 0 0.6em 0 1.5em;
+  padding: 1em 1.5em 1em 1.5em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+  display: table;
+}
+
+div#user-edit-container div#user-edit-bottom-row form p {
+  display: row;
+}
+
+div#user-edit-container div#user-edit-bottom-row form label, div#user-edit-container div#user-edit-bottom-row form input {
+  display: table-cell;
+  font-size: 2em;
+}
+
+div#user-edit-container div#user-edit-bottom-row form button, div#user-edit-container div#user-edit-bottom-row form a {
+  display: inline-block;
+  background-color: #D0D6B3;
+  color: #143109;
+  font-size: 2em;
+  margin: 1em;
+  border: 0.2em solid #143109;
+  border-radius: .2em;
+  padding: .2em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+div#user-edit-container div#user-edit-bottom-row form button:hover {
+  background-color: #143109;
+  /* Green */
+  color: #D0D6B3;
+  border: 0.2em solid #D0D6B3;
+}
+
+div#user-edit-container div#user-edit-bottom-row form a:hover {
+  background-color: #143109;
+  /* Green */
+  color: #D0D6B3;
+  border: 0.2em solid #D0D6B3;
 }
 /*# sourceMappingURL=main.css.map */

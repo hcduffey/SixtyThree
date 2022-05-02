@@ -14,24 +14,39 @@
               <div id="user-show-name-container">
                      <h3><%= user.name %></h3>
                      <% if(editOK) { %>
-                            <a href="/users/<%= user._id %>/edit">Edit Profile</a>
+                            <a href="/users/<%= user._id %>/edit">Edit Profile <img src="https://cdn-icons-png.flaticon.com/512/61/61456.png" alt="Edit Icon"></a>
                      <% } %>
+              </div>
+       </div>
+       <div id="user-show-middle-row">
+              <div id="user-show-reviews-title-container">
+                     <div id=reviews-title>
+                            <h5>Reviews</h5>
+                     </div>
+              </div>
+              <div id="user-show-badges-title-container">
+                     <div id=badges-title>
+                            <h5>Badges</h5>
+                     </div>
               </div>
        </div>
        <div id="user-show-bottom-row">
               <div id="user-show-reviews-container">
-                     <% if (userReviews.length > 0) { %>
-                            <% for(let i=0; i < userReviews.length; i++) { %>
-                                  <%= userReviews[i].park.name %>
-                                  <br>
-                                  <% for(let j=0; j < userReviews[i].rating; j++) { %>
-                                   &#9734;
-                                  <% } %>
-                                  <br>
-                                  <q><%= userReviews[i].comment %></q>
-                                  <hr>
+                            <% if (userReviews.length > 0) { %>
+                                   <% for(let i=0; i < userReviews.length; i++) { %>
+                                          <div id="park-name">
+                                         <%= userReviews[i].park.name %>
+                                          </div>
+                                         <% for(let j=0; j < userReviews[i].rating; j++) { %>
+                                          <div id="review-rating">
+                                          &#9734;
+                                          </div>
+                                         <% } %>
+                                         <div id="review-comment">
+                                         <q><%= userReviews[i].comment %></q>
+                                         </div>
+                                   <% } %>
                             <% } %>
-                     <% } %>
               </div>
               <div id="user-show-badges-container">
                      <% if (user.badges.length > 0) { %>
