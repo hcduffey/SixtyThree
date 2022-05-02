@@ -5,6 +5,12 @@ const siteRoutes = [
 
 let navLinks = function navLinks(req, res, next) {
     res.locals.routes = siteRoutes;
+    res.locals.active = req.originalUrl;
+    
+    if(res.locals.active.includes(req.session.currentUser.id)) {
+        res.locals.active = "/home";
+    }
+   
     next();
 }
 

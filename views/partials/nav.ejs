@@ -2,15 +2,27 @@
     <a href="/"><img class="navimage" src="https://fontmeme.com/permalink/220429/c212d0e62f59f0785dc6363e95133f96.png" alt="not-perfect-font" border="0"></a>
     <div class="navList">
     <% if(navBarUser) { %>
-        <a href="/home"><%= navBarUser.name %></a> | <a href="/logout">Logout</a> |
+        <% if(active.includes("/home")) { %>
+            <a class="active" href="/home"><%= navBarUser.name %></a>
+        <% } else { %>
+            <a href="/home"><%= navBarUser.name %></a>
+        <% } %>
+         | <a href="/logout">Logout</a> |
     <% } else { %>
         <a href="/login">Login</a> | <a href="/register">Register</a> |
     <% } %>
-
+    
     <% if(routes) { %>
-        <% routes.forEach((route) => { %>
+        <% routes.forEach((route, index) => { %>
+            <% if(active.includes(route.href)) { %>
+                <a class="active" href="<%= route.href %>"><%= route.title %></a>
+            <% } else { %>
+                <a href="<%= route.href %>"><%= route.title %></a>
+            <% } %>
 
-            <a href="<%= route.href %>"><%= route.title %></a> |
+            <% if(index !== routes.length-1) { %>
+                |
+            <% } %>
 
         <% }); %>
     <% } %>
