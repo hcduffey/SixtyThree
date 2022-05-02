@@ -6,6 +6,9 @@
 
 #login-container {
 	background-color: $primary-color;
+    background-image: url("https://share.sketchpad.app/22/c41-26b8-fcf5ee.png");  
+    background-size: cover;
+    background-attachment: fixed;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -14,53 +17,53 @@
 
     #login-form {
         background-color: $secondary-color;
+        box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
         border-radius: 10px;
         text-align: center;
         padding: 10px;
 
         form {
             padding: 15px;
-            display: flex;
+            display: table;
             flex-direction: column;
             align-items: center;
             justify-content: center;
 
+            p { display: table-row; text-align: center; }
+
             label, input {
-                font-size: 2em;
+                font-size: 2.2em;
+                border-radius: 5px;
+                border-style: 1px solid $primary-color;
+                display: table-cell
             }
 
             h3 {
                 color: $primary-color;
             }
      
-            .control {
-                margin-top: 10px;
-                margin-bottom: 5px;
-                display: inline-block;
-                color: $primary-color
+            button {
+                display: table-cell;
+                background-color: $primary-color;
+                color: $secondary-color;
+                font-size: 2em;
+                margin: 1em;
+                border: .2em solid $secondary-color;
+                border-radius: .2em;
+                padding: .2em;
+                transition: $base-transition;
             }
-
-            #submit {
-                display: flex;
-                align-items: center;
-
-                button {
-                    background-color: $primary-color;
-                    color: $secondary-color;
-                    font-size: 2em;
-                    margin: 1em;
-                    border: .2em solid $secondary-color;
-                    border-radius: .2em;
-                    padding: .2em;
-                    transition: $base-transition;
-                }
                   
-                button:hover {
-                    background-color: $secondary-color; /* Green */
-                    color: $primary-color;
-                    border: .2em solid $primary-color;
-                }
+            button:hover {
+                background-color: $secondary-color; /* Green */
+                color: $primary-color;
+                border: .2em solid $primary-color;
             }
+
+            #sign-up {
+                display: table-cell;
+            }
+            
         }
     }
 }

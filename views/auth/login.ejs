@@ -4,46 +4,35 @@
 <body>
     <div id="login-container">
         <div id="login-form">
-          <h3>Login</h3>
-          <form action="/login" method="POST">
-            <div id="input-group">
-                <div class="field">
-                <label class="label">Email:</label>
-                <div class="control">
+            <h3>Login</h3>
+            <form action="/login" method="POST">
+                <p>
+                    <label class="label">Email:</label>
                     <input
-                    name="email"
-                    class="input"
-                    type="email"
-                    placeholder="example@domain.com"
+                        name="email"
+                        class="input"
+                        type="email"
+                        placeholder="example@domain.com"
                     />
-                </div>
-                </div>
-                <div class="field">
-                <label class="label">Password:</label>
-                <div class="control">
+                </p>
+                <p>
+                    <label class="label">Password:</label>
                     <input
-                    name="password"
-                    class="input"
-                    type="password"
-                    placeholder="******"
+                        name="password"
+                        class="input"
+                        type="password"
+                        placeholder="******"
                     />
-                </div>
-                </div>
-            </div>
-            <div id="submit">
-              <div class="control">
-                <button type="submit">Submit</button>
-              </div>
-            </div>
-            <a href="/register">Sign up to create an account</a>
+                </p>
+                <p>
+                    <a id="sign-up" href="/register">Sign up to create an account</a>
+                    <button type="submit">Submit</button>
+                </p>        
+            </form> 
             <% if(message) { %>
                 <span id="flash-message"><%= message %></span>
-            <% } %>
-          </form>
+            <% } %> 
         </div>
-    
-
     </div>
-    
 </body>
 </html>

@@ -6,49 +6,44 @@
         <div id="register-form">
           <h3>Register</h3>
           <form action="/register" method="POST">
-            <div id="input-group">
-                <div class="field">
-                <label class="label">Name:</label>
-                <div class="control">
-                    <input
+            <p>
+                <label class="label">Your name</label>
+                
+                <input
                     name="name"
                     class="input"
                     type="text"
                     required
-                    />
-                </div>
-                </div>
-                <div class="field">
-                <label class="label">Email:</label>
-                <div class="control">
-                    <input
+                />
+            </p>
+            <p>
+                <label class="label">Your e-mail address</label>
+                
+                <input
                     name="email"
                     class="input"
                     type="email"
                     placeholder="example@domain.com"
                     required
-                    />
-                </div>
-                </div>
-                <div class="field">
-                <label class="label">Password:</label>
-                <div class="control">
-                    <input
+                />
+            </p>
+            <p>
+                
+                <label class="label">Secure password:</label>
+                
+                <input
                     name="password"
                     class="input"
                     type="password"
                     placeholder="******"
                     required
-                    />
-                </div>
-                </div>
-            </div>
-            <div id="submit">
-              <div class="control">
+                />
+                
+            </p>
+            <p>
+                <a id="already-signed-up" href="/login">Already have an account?</a>
                 <button type="submit">Submit</button>
-              </div>
-            </div>
-            <a href="/login">Already have an account? Login</a>
+            <p>
           </form>
         </div>
     </div>
