@@ -270,7 +270,8 @@ nav .navimage {
   background: white;
   color: #143109;
   border: .15em solid white;
-  padding: .2em;
+  margin: 0.22em;
+  padding: .15em;
 }
 
 .infoText1 a:hover {
