@@ -371,17 +371,17 @@ a:hover {
   color: #ffe766;
 }
 
-
-
 #flash-message {
   color: blue;
   font-size: 1.5em;
   display: block;
 }
 
-
 #login-container {
   background-color: #143109;
+  background-image: url("https://share.sketchpad.app/22/c41-26b8-fcf5ee.png");
+  background-size: cover;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,6 +397,8 @@ a:hover {
 
 #login-container #login-form {
   background-color: #D0D6B3;
+  -webkit-box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
+          box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
   border-radius: 10px;
   text-align: center;
   padding: 10px;
@@ -404,9 +406,7 @@ a:hover {
 
 #login-container #login-form form {
   padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: table;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -419,31 +419,24 @@ a:hover {
           justify-content: center;
 }
 
+#login-container #login-form form p {
+  display: table-row;
+  text-align: center;
+}
+
 #login-container #login-form form label, #login-container #login-form form input {
-  font-size: 2em;
+  font-size: 2.2em;
+  border-radius: 5px;
+  border-style: 1px solid #143109;
+  display: table-cell;
 }
 
 #login-container #login-form form h3 {
   color: #143109;
 }
 
-#login-container #login-form form .control {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  display: inline-block;
-  color: #143109;
-}
-
-#login-container #login-form form #submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#login-container #login-form form #submit button {
+#login-container #login-form form button {
+  display: table-cell;
   background-color: #143109;
   color: #D0D6B3;
   font-size: 2em;
@@ -455,15 +448,22 @@ a:hover {
   transition: all 0.5s ease;
 }
 
-#login-container #login-form form #submit button:hover {
+#login-container #login-form form button:hover {
   background-color: #D0D6B3;
   /* Green */
   color: #143109;
   border: 0.2em solid #143109;
 }
 
+#login-container #login-form form #sign-up {
+  display: table-cell;
+}
+
 #register-container {
   background-color: #143109;
+  background-image: url("https://share.sketchpad.app/22/c41-26b8-fcf5ee.png");
+  background-size: cover;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,6 +479,8 @@ a:hover {
 
 #register-container #register-form {
   background-color: #D0D6B3;
+  -webkit-box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
+          box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
   border-radius: 10px;
   text-align: center;
   padding: 10px;
@@ -501,31 +503,24 @@ a:hover {
           justify-content: center;
 }
 
+#register-container #register-form form p {
+  display: table-row;
+  text-align: center;
+}
+
 #register-container #register-form form label, #register-container #register-form form input {
-  font-size: 2em;
+  font-size: 2.2em;
+  border-radius: 5px;
+  border-style: 1px solid #143109;
+  display: table-cell;
 }
 
 #register-container #register-form form h3 {
   color: #143109;
 }
 
-#register-container #register-form form .control {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  display: inline-block;
-  color: #143109;
-}
-
-#register-container #register-form form #submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#register-container #register-form form #submit button {
+#register-container #register-form form button {
+  display: table-cell;
   background-color: #143109;
   color: #D0D6B3;
   font-size: 2em;
@@ -537,10 +532,14 @@ a:hover {
   transition: all 0.5s ease;
 }
 
-#register-container #register-form form #submit button:hover {
+#register-container #register-form form button:hover {
   background-color: #D0D6B3;
   /* Green */
   color: #143109;
   border: 0.2em solid #143109;
+}
+
+#register-container #register-form form #already-signed-up {
+  display: table-cell;
 }
 /*# sourceMappingURL=main.css.map */

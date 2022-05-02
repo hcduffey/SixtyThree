@@ -13,8 +13,6 @@ router.get('/flash', async function (req, res) {
     else if(req.headers.referer.endsWith("/register")) {
         await req.flash('login-message', 'Account successfully created. Please login.');
     }
-
-    console.log(req.headers);
     
     res.redirect('/login');
 });
