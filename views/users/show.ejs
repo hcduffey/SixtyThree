@@ -14,8 +14,20 @@
               <div id="user-show-name-container">
                      <h3><%= user.name %></h3>
                      <% if(editOK) { %>
-                            <a href="/users/<%= user._id %>/edit">Edit Profile</a>
+                            <a href="/users/<%= user._id %>/edit">Edit Profile <img src="https://cdn-icons-png.flaticon.com/512/61/61456.png" alt="Edit Icon"></a>
                      <% } %>
+              </div>
+       </div>
+       <div id="user-show-middle-row">
+              <div id="user-show-reviews-title-container">
+                     <div id=reviews-title>
+                            <h5>Reviews</h5>
+                     </div>
+              </div>
+              <div id="user-show-badges-title-container">
+                     <div id=badges-title>
+                            <h5>Badges</h5>
+                     </div>
               </div>
        </div>
        <div id="user-show-bottom-row">

@@ -349,10 +349,12 @@ div#user-show-container {
 }
 
 div#user-show-container div#user-show-top-row {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: solid black;
+  margin: 2em 2em 0 4em;
+  padding: 0 1em 1em 1em;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container {
@@ -366,7 +368,7 @@ div#user-show-container div#user-show-top-row div#user-show-avatar-container {
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container img#user-show-avatar {
   height: 150px;
-  margin: 2em;
+  margin: 2em 2em 2em 4em;
   border-radius: 20em;
 }
 
@@ -384,11 +386,51 @@ div#user-show-container div#user-show-top-row div#user-show-name-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1em;
+  font-size: 0.75em;
+  margin-top: 4em;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-name-container a {
   font-size: 2em;
+}
+
+div#user-show-container div#user-show-top-row div#user-show-name-container a img {
+  display: inline;
+  max-width: 18px;
+  color: green;
+}
+
+div#user-show-container div#user-show-middle-row {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div#user-show-container div#user-show-middle-row #user-show-reviews-title-container {
+  width: 50%;
+  border: solid black;
+  margin: 1em 2em 0 4em;
+  padding: 0 1em 1em 1em;
+}
+
+div#user-show-container div#user-show-middle-row #user-show-reviews-title-container #reviews-title {
+  font-size: 3em;
+  display: block;
+  margin: 0.5em 0 0 0;
+}
+
+div#user-show-container div#user-show-middle-row #user-show-badges-title-container {
+  width: 50%;
+  border: solid black;
+  margin: 1em 2em 0 0;
+  padding: 0 1em 1em 1em;
+}
+
+div#user-show-container div#user-show-middle-row #user-show-badges-title-container #badges-title {
+  font-size: 3em;
+  display: block;
+  margin: 0.5em 0 0 0;
 }
 
 div#user-show-container div#user-show-bottom-row {
@@ -396,12 +438,13 @@ div#user-show-container div#user-show-bottom-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1em 0;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container {
   width: 50%;
   border: solid black;
-  margin: 0 2em 0 2em;
+  margin: 0 2em 0 4em;
   padding: 0 1em 1em 1em;
 }
 
