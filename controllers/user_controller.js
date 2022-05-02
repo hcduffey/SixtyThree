@@ -46,9 +46,12 @@ router.get('/:id', async(req, res, next) => {
     try {
         const user = await db.User.findById(req.params.id).populate('parks').populate('badges');
         const allParks = await db.Park.find({});
-        const userReviews = await db.Rating.find({user: user._id}).populate('park');
+        let userReviews = await db.Rating.find({user: user._id}).populate('park');
 
-        console.log(userReviews);
+
+        // check for orphan reviews (where the Park ID changed and no longer maps correctly)
+        userReviews = userReviews.filter((review) => review.park !== null)
+
         let editOK = false;
 
         // a user should only be able to edit their own profile
