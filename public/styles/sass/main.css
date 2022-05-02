@@ -367,6 +367,7 @@ div#user-show-container div#user-show-top-row div#user-show-avatar-container {
 div#user-show-container div#user-show-top-row div#user-show-avatar-container img#user-show-avatar {
   height: 150px;
   margin: 1em;
+  border-radius: 20em;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-name-container {
@@ -383,6 +384,7 @@ div#user-show-container div#user-show-top-row div#user-show-name-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 1em;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-name-container a {
@@ -391,7 +393,6 @@ div#user-show-container div#user-show-top-row div#user-show-name-container a {
 
 div#user-show-container div#user-show-bottom-row {
   width: 100vw;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,6 +400,21 @@ div#user-show-container div#user-show-bottom-row {
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container {
   width: 50%;
+}
+
+div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #park-name {
+  font-size: 3em;
+  display: block;
+}
+
+div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-rating {
+  font-size: 2em;
+  display: inline;
+}
+
+div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-comment {
+  font-size: 2em;
+  display: inline;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container {
@@ -411,8 +427,9 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container img.user-show-badge {
-  height: 150px;
-  margin: 1em;
+  max-height: 100px;
+  max-width: 100px;
+  margin: 0em;
 }
 
 .userIndex {

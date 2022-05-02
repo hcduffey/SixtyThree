@@ -20,18 +20,21 @@
        </div>
        <div id="user-show-bottom-row">
               <div id="user-show-reviews-container">
-                     <% if (userReviews.length > 0) { %>
-                            <% for(let i=0; i < userReviews.length; i++) { %>
-                                  <%= userReviews[i].park.name %>
-                                  <br>
-                                  <% for(let j=0; j < userReviews[i].rating; j++) { %>
-                                   &#9734;
-                                  <% } %>
-                                  <br>
-                                  <q><%= userReviews[i].comment %></q>
-                                  <hr>
+                            <% if (userReviews.length > 0) { %>
+                                   <% for(let i=0; i < userReviews.length; i++) { %>
+                                          <div id="park-name">
+                                         <%= userReviews[i].park.name %>
+                                          </div>
+                                         <% for(let j=0; j < userReviews[i].rating; j++) { %>
+                                          <div id="review-rating">
+                                          &#9734;
+                                          </div>
+                                         <% } %>
+                                         <div id="review-comment">
+                                         <q><%= userReviews[i].comment %></q>
+                                         </div>
+                                   <% } %>
                             <% } %>
-                     <% } %>
               </div>
               <div id="user-show-badges-container">
                      <% if (user.badges.length > 0) { %>
