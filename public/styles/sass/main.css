@@ -70,6 +70,11 @@ a {
   transition: all 0.5s ease;
 }
 
+a.active {
+  text-decoration: none;
+  color: #ffe766;
+}
+
 h3 {
   font-size: 8em;
 }
