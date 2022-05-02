@@ -346,6 +346,8 @@ div#user-show-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #143109;
+  text-shadow: 0.2em 0.3em 0.3em rgba(0, 0, 0, 0.08);
 }
 
 div#user-show-container div#user-show-top-row {
@@ -353,8 +355,12 @@ div#user-show-container div#user-show-top-row {
   display: -ms-flexbox;
   display: flex;
   border: solid black;
-  margin: 2em 2em 0 4em;
+  margin: 1.5em 3em 0 1.5em;
   padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
+  border-radius: 14px;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container {
@@ -410,8 +416,11 @@ div#user-show-container div#user-show-middle-row {
 div#user-show-container div#user-show-middle-row #user-show-reviews-title-container {
   width: 50%;
   border: solid black;
-  margin: 1em 2em 0 4em;
+  margin: 1em .6em 0 1.5em;
   padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
 }
 
 div#user-show-container div#user-show-middle-row #user-show-reviews-title-container #reviews-title {
@@ -423,8 +432,11 @@ div#user-show-container div#user-show-middle-row #user-show-reviews-title-contai
 div#user-show-container div#user-show-middle-row #user-show-badges-title-container {
   width: 50%;
   border: solid black;
-  margin: 1em 2em 0 0;
+  margin: 1em 3em 0 0.6em;
   padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
 }
 
 div#user-show-container div#user-show-middle-row #user-show-badges-title-container #badges-title {
@@ -444,25 +456,31 @@ div#user-show-container div#user-show-bottom-row {
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container {
   width: 50%;
   border: solid black;
-  margin: 0 2em 0 4em;
+  margin: 0 0.6em 0 1.5em;
   padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #park-name {
   font-size: 3em;
   display: block;
   margin: 0.5em 0 0 0;
+  text-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.1);
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-rating {
   font-size: 2em;
   display: inline;
+  text-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.1);
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #review-comment {
   font-size: 2em;
   display: inline;
   margin: 0 1em 0 0;
+  text-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.1);
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container {
@@ -473,14 +491,19 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border: solid black;
-  margin: 0 2em 0 0;
+  margin: 0 3em 0 0.6em;
   padding: 0 1em 1em 1em;
+  background-color: #D0D6B3;
+  border-color: #47745d5c;
+  border-width: 0.5em;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container img.user-show-badge {
   max-height: 100px;
   max-width: 100px;
   margin: 1.7em 0 0 0;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(2px 2px 5px rgba(34, 34, 34, 0.431));
 }
 
 .userIndex {

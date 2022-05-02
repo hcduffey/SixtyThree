@@ -3,14 +3,20 @@ div#user-show-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: $primary-color;
+    text-shadow: .2em .3em .3em rgba(0,0,0,0.08);
 
     div#user-show-top-row {
         // width: 100vw;
         display: flex;
         border: solid black;
-        margin: 2em 2em 0 4em;
+        margin: 1.5em 3em 0 1.5em;
         padding: 0 1em 1em 1em;
-        
+        background-color: $secondary-color;
+        border-color: #47745d5c;
+        border-width: 0.5em;
+        border-radius: 14px;
+
         div#user-show-avatar-container {
             width: fit-content;
             height: fit-content;
@@ -49,8 +55,11 @@ div#user-show-container {
         #user-show-reviews-title-container{
             width:50%;
             border: solid black;
-            margin: 1em 2em 0 4em;
+            margin: 1em .6em 0 1.5em;
             padding: 0 1em 1em 1em;
+            background-color: $secondary-color;
+            border-color: #47745d5c;
+            border-width: 0.5em;
 
             #reviews-title {
                 font-size: 3em;
@@ -62,8 +71,11 @@ div#user-show-container {
         #user-show-badges-title-container{
             width:50%;
             border: solid black;
-            margin: 1em 2em 0 0;
+            margin: 1em 3em 0 0.6em;
             padding: 0 1em 1em 1em;
+            background-color: $secondary-color;
+            border-color: #47745d5c;
+            border-width: 0.5em;
 
             #badges-title {
                 font-size: 3em;
@@ -82,24 +94,31 @@ div#user-show-container {
         div#user-show-reviews-container {
             width:50%;
             border: solid black;
-            margin: 0 2em 0 4em;
+            margin: 0 0.6em 0 1.5em;
             padding: 0 1em 1em 1em;
+            background-color: $secondary-color;
+            border-color: #47745d5c;
+            border-width: 0.5em;
 
                 #park-name {
                     font-size: 3em;
                     display: block;
                     margin: 0.5em 0 0 0;
+                    text-shadow: .2em .2em .3em rgba(0,0,0,0.1);
+
                 }
 
                 #review-rating{
                     font-size: 2em;
                     display: inline;
+                    text-shadow: .2em .2em .3em rgba(0,0,0,0.1);
                 }
 
                 #review-comment{
                     font-size: 2em;
                     display: inline;
                     margin: 0 1em 0 0;
+                    text-shadow: .1em .1em .5em rgba(0,0,0,0.1);
                 }
         }
 
@@ -108,13 +127,18 @@ div#user-show-container {
             display: flex;
             flex-wrap: wrap;
             border: solid black;
-            margin: 0 2em 0 0;
+            margin: 0 3em 0 0.6em;
             padding: 0 1em 1em 1em;
+            background-color: $secondary-color;
+            border-color: #47745d5c;
+            border-width: 0.5em;
 
             img.user-show-badge {
                 max-height: 100px;
                 max-width: 100px;
                 margin: 1.7em 0 0 0;
+                -webkit-filter: drop-shadow(5px 5px 5px #222);
+                filter: drop-shadow(2px 2px 5px rgba(34, 34, 34, 0.431));
             }
         }
     }
