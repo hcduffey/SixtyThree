@@ -66,13 +66,12 @@
     background-repeat: no-repeat;
     // background-attachment: fixed;
     background-size: cover;
-    width: 85%;
+    width: 100vw;
     min-height: 30%;
     margin:1em 0;
     overflow: hidden; 
     animation-name: null;
     animation-duration: 3s;
-    border-radius: 3em;
     }
     .info2{
     background: url('https://images.pexels.com/photos/63553/pexels-photo-63553.jpeg');
@@ -80,13 +79,12 @@
     background-repeat: no-repeat;
     // background-attachment: fixed;
     background-size: cover;
-    width: 85%;
+    width: 100vw;
     min-height: 30%;
     margin:1em 0;  
     overflow: hidden; 
     animation-name: null;
     animation-duration: 4s;
-    border-radius: 3em;
     }
     .info3{
     background: url('https://images.pexels.com/photos/248820/pexels-photo-248820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -94,13 +92,12 @@
     background-repeat: no-repeat;
     // background-attachment: fixed;
     background-size: cover;
-    width: 85%;
+    width: 100vw;
     min-height: 30%;
     margin:1em 0; 
     overflow: hidden; 
     animation-name: null;
     animation-duration: 5s;
-    border-radius: 3em;
     }
     
 }
@@ -109,7 +106,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    color: white;
+    color: $secondary-color;
     background-color: rgba(0,0,0,0.22);
     height: 100%;
     padding-left: 3em;
@@ -117,16 +114,17 @@
     
     a{
         border-radius: .2em;
-        background: white;
-        color: $primary-color;
-        border: .15em solid white;
+        color: $secondary-color;
+        border: .15em solid $secondary-color;
+        background: none;
         margin: 0.22em;
         padding: .15em;
     }
     a:hover{
         border-radius: .4em;
         transform: scale(1.2);
-        color: white;
-        background: none;
+        color: black;
+        border: .15em solid $secondary-color;
+        background: $secondary-color;
     }
 }

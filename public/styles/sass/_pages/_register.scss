@@ -1,6 +1,5 @@
 #register-container {
-	background-color: $primary-color;
-    background-image: url("https://share.sketchpad.app/22/c41-26b8-fcf5ee.png");  
+	background-image: url("/images/login-background.jpg");  
     background-size: cover;
     background-attachment: fixed;
     display: flex; 
@@ -10,8 +9,7 @@
     height: 100vh;
 
     #register-form {
-        background-color: $secondary-color;
-        box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
+        background-color: rgba(255,255,255,0.7);
         border-radius: 10px;
         text-align: center;
         padding: 10px;
@@ -42,7 +40,7 @@
                 color: $secondary-color;
                 font-size: 2em;
                 margin: 1em;
-                border: .2em solid $secondary-color;
+                border: .2em solid $primary-color;
                 border-radius: .2em;
                 padding: .2em;
                 transition: $base-transition;

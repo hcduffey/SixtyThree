@@ -89,14 +89,13 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(20, 49, 9, 0.7);
-  color: #D0D6B3;
+  background: #606c38;
+  color: #fefae0;
   height: 75px;
-  text-shadow: 0.1em 0.1em 0.12em rgba(0, 0, 0, 0.33);
 }
 
 nav a {
-  color: #D0D6B3;
+  color: #fefae0;
   font-size: 2em;
   margin: 0 1em;
 }
@@ -116,7 +115,7 @@ nav .navimage {
 }
 
 #modal {
-  background-color: #143109;
+  background-color: #283618;
   position: fixed;
   top: 0;
   left: 0;
@@ -141,7 +140,7 @@ nav .navimage {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #143109;
+  background-color: #283618;
   height: 100%;
   width: 100%;
   text-align: center;
@@ -164,10 +163,10 @@ nav .navimage {
 }
 
 #modal-textbox a {
-  color: #D0D6B3;
+  color: #fefae0;
   font-size: 2.5em;
   margin: 1em;
-  border: 0.25em solid #D0D6B3;
+  border: 0.25em solid #fefae0;
   border-radius: .6em;
   padding: .4em;
   z-index: 2;
@@ -177,8 +176,8 @@ nav .navimage {
 #close:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background: #D0D6B3;
-  color: #143109;
+  background: #fefae0;
+  color: #283618;
   text-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.2);
   font-weight: bold;
 }
@@ -197,7 +196,7 @@ nav .navimage {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #143109;
+  background: #283618;
   height: 100vh;
 }
 
@@ -206,7 +205,7 @@ nav .navimage {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 85%;
+  width: 100vw;
   min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
@@ -214,7 +213,6 @@ nav .navimage {
           animation-name: null;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  border-radius: 3em;
 }
 
 .homeAbout .info2 {
@@ -222,7 +220,7 @@ nav .navimage {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 85%;
+  width: 100vw;
   min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
@@ -230,7 +228,6 @@ nav .navimage {
           animation-name: null;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
-  border-radius: 3em;
 }
 
 .homeAbout .info3 {
@@ -238,7 +235,7 @@ nav .navimage {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 85%;
+  width: 100vw;
   min-height: 30%;
   margin: 1em 0;
   overflow: hidden;
@@ -246,7 +243,6 @@ nav .navimage {
           animation-name: null;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
-  border-radius: 3em;
 }
 
 .infoText1 {
@@ -261,7 +257,7 @@ nav .navimage {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  color: white;
+  color: #fefae0;
   background-color: rgba(0, 0, 0, 0.22);
   height: 100%;
   padding-left: 3em;
@@ -270,9 +266,9 @@ nav .navimage {
 
 .infoText1 a {
   border-radius: .2em;
-  background: white;
-  color: #143109;
-  border: .15em solid white;
+  color: #fefae0;
+  border: 0.15em solid #fefae0;
+  background: none;
   margin: 0.22em;
   padding: .15em;
 }
@@ -281,13 +277,14 @@ nav .navimage {
   border-radius: .4em;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: white;
-  background: none;
+  color: black;
+  border: 0.15em solid #fefae0;
+  background: #fefae0;
 }
 
 .containerPark {
-  background-color: rgba(20, 49, 9, 0.7);
-  color: #D0D6B3;
+  background-color: rgba(40, 54, 24, 0.7);
+  color: #fefae0;
 }
 
 .parkAbout {
@@ -321,7 +318,7 @@ nav .navimage {
   position: absolute;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.7);
-  color: #D0D6B3;
+  color: #fefae0;
   padding-left: 20px;
   padding-right: 20px;
   -ms-flex-wrap: wrap;
@@ -333,8 +330,8 @@ nav .navimage {
   margin: 1em 0em;
   padding: .5em;
   font-size: 1.5em;
-  background-color: #D0D6B3;
-  color: #143109;
+  background-color: #fefae0;
+  color: #283618;
   border-radius: 10px;
 }
 
@@ -344,8 +341,8 @@ nav .navimage {
 
 .parkImageContainer .imageText p {
   font-size: 2em;
-  border: 1px solid #D0D6B3;
-  background-color: #143109;
+  border: 1px solid #fefae0;
+  background-color: #283618;
 }
 
 .parkImageContainer .imageText h2 {
@@ -362,7 +359,7 @@ nav .navimage {
 
 .parkImageContainer .parkImage {
   width: 100%;
-  border-bottom: 10px solid #143109;
+  border-bottom: 10px solid #283618;
 }
 
 .parkImageContainer .parkBadge {
@@ -381,8 +378,8 @@ nav .navimage {
 }
 
 .parkImageContainer .parkButton:hover {
-  background-color: #143109;
-  color: #D0D6B3;
+  background-color: #283618;
+  color: #fefae0;
 }
 
 .reviewSection {
@@ -423,18 +420,18 @@ nav .navimage {
   margin: 1em 0em;
   padding: .2em;
   font-size: 1em;
-  background-color: #143109;
-  color: #D0D6B3;
+  background-color: #283618;
+  color: #fefae0;
   border-radius: 10px;
 }
 
 .reviewForm textarea {
-  background-color: #D0D6B3;
+  background-color: #fefae0;
 }
 
 .submitButton:hover {
-  background-color: #D0D6B3;
-  color: #143109;
+  background-color: #fefae0;
+  color: #283618;
 }
 
 fieldset {
@@ -443,7 +440,7 @@ fieldset {
 
 .reviewComments {
   padding: 1em;
-  border: 5px solid #143109;
+  border: 5px solid #283618;
   margin: 0 0 1em 0;
 }
 
@@ -459,8 +456,8 @@ fieldset {
   margin: 1em 0em;
   padding: .2em;
   font-size: 1em;
-  background-color: #143109;
-  color: #D0D6B3;
+  background-color: #283618;
+  color: #fefae0;
   border-radius: 10px;
 }
 
@@ -481,12 +478,12 @@ fieldset {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #143109;
+  background: #283618;
 }
 
 .container h1 {
   font-size: 7em;
-  color: #D0D6B3;
+  color: #fefae0;
   text-shadow: 0.1em 0.1em 0.12em rgba(0, 0, 0, 0.266);
   margin: .5em 0 0 0;
 }
@@ -509,7 +506,7 @@ fieldset {
 }
 
 .container a {
-  color: #D0D6B3;
+  color: #fefae0;
 }
 
 .container img {
@@ -525,7 +522,7 @@ a:hover {
 
 h1 {
   font-size: 7em;
-  color: #D0D6B3;
+  color: #fefae0;
   text-shadow: 0.1em 0.1em 0.12em rgba(0, 0, 0, 0.266);
   margin: .5em 0 0 0;
 }
@@ -540,7 +537,7 @@ div#user-show-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #143109;
+  background-color: #283618;
   text-shadow: 0.2em 0.3em 0.3em rgba(0, 0, 0, 0.08);
 }
 
@@ -551,7 +548,7 @@ div#user-show-container div#user-show-top-row {
   border: solid black;
   margin: 1.5em 3em 0 1.5em;
   padding: 0 1em 1em 1em;
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.5em;
   border-radius: 14px;
@@ -612,7 +609,7 @@ div#user-show-container div#user-show-middle-row #user-show-reviews-title-contai
   border: solid black;
   margin: 1em .6em 0 1.5em;
   padding: 0 1em 1em 1em;
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.5em;
 }
@@ -628,7 +625,7 @@ div#user-show-container div#user-show-middle-row #user-show-badges-title-contain
   border: solid black;
   margin: 1em 3em 0 0.6em;
   padding: 0 1em 1em 1em;
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.5em;
 }
@@ -652,7 +649,7 @@ div#user-show-container div#user-show-bottom-row div#user-show-reviews-container
   border: solid black;
   margin: 0 0.6em 0 1.5em;
   padding: 0 1em 1em 1em;
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.5em;
 }
@@ -687,7 +684,7 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
   border: solid black;
   margin: 0 3em 0 0.6em;
   padding: 0 1em 1em 1em;
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.5em;
 }
@@ -717,7 +714,7 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #143109;
+  background: #283618;
 }
 
 .userIndex .userList {
@@ -737,7 +734,7 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
 }
 
 .userIndex a {
-  color: #D0D6B3;
+  color: #fefae0;
 }
 
 .userIndex img {
@@ -757,8 +754,7 @@ a:hover {
 }
 
 #login-container {
-  background-color: #143109;
-  background-image: url("https://share.sketchpad.app/22/c41-26b8-fcf5ee.png");
+  background-image: url("/images/login-background.jpg");
   background-size: cover;
   background-attachment: fixed;
   display: -webkit-box;
@@ -775,9 +771,7 @@ a:hover {
 }
 
 #login-container #login-form {
-  background-color: #D0D6B3;
-  -webkit-box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
-          box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   text-align: center;
   padding: 10px;
@@ -806,21 +800,21 @@ a:hover {
 #login-container #login-form form label, #login-container #login-form form input {
   font-size: 2.2em;
   border-radius: 5px;
-  border-style: 1px solid #143109;
+  border-style: 1px solid #283618;
   display: table-cell;
 }
 
 #login-container #login-form form h3 {
-  color: #143109;
+  color: #283618;
 }
 
 #login-container #login-form form button {
   display: table-cell;
-  background-color: #143109;
-  color: #D0D6B3;
+  background-color: #283618;
+  color: #fefae0;
   font-size: 2em;
   margin: 1em;
-  border: 0.2em solid #D0D6B3;
+  border: 0.2em solid #283618;
   border-radius: .2em;
   padding: .2em;
   -webkit-transition: all 0.5s ease;
@@ -828,10 +822,10 @@ a:hover {
 }
 
 #login-container #login-form form button:hover {
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   /* Green */
-  color: #143109;
-  border: 0.2em solid #143109;
+  color: #283618;
+  border: 0.2em solid #283618;
 }
 
 #login-container #login-form form #sign-up {
@@ -839,8 +833,7 @@ a:hover {
 }
 
 #register-container {
-  background-color: #143109;
-  background-image: url("https://share.sketchpad.app/22/c41-26b8-fcf5ee.png");
+  background-image: url("/images/login-background.jpg");
   background-size: cover;
   background-attachment: fixed;
   display: -webkit-box;
@@ -857,9 +850,7 @@ a:hover {
 }
 
 #register-container #register-form {
-  background-color: #D0D6B3;
-  -webkit-box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
-          box-shadow: -0.2em 0 .4em black, -0.2em 0 .4em black;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   text-align: center;
   padding: 10px;
@@ -890,21 +881,21 @@ a:hover {
 #register-container #register-form form label, #register-container #register-form form input {
   font-size: 2.2em;
   border-radius: 5px;
-  border-style: 1px solid #143109;
+  border-style: 1px solid #283618;
   display: table-cell;
 }
 
 #register-container #register-form form h3 {
-  color: #143109;
+  color: #283618;
 }
 
 #register-container #register-form form button {
   display: table-cell;
-  background-color: #143109;
-  color: #D0D6B3;
+  background-color: #283618;
+  color: #fefae0;
   font-size: 2em;
   margin: 1em;
-  border: 0.2em solid #D0D6B3;
+  border: 0.2em solid #283618;
   border-radius: .2em;
   padding: .2em;
   -webkit-transition: all 0.5s ease;
@@ -912,10 +903,10 @@ a:hover {
 }
 
 #register-container #register-form form button:hover {
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   /* Green */
-  color: #143109;
-  border: 0.2em solid #143109;
+  color: #283618;
+  border: 0.2em solid #283618;
 }
 
 #register-container #register-form form #already-signed-up {
@@ -932,7 +923,7 @@ div#user-edit-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #143109;
+  background-color: #283618;
   text-shadow: 0.2em 0.3em 0.3em rgba(0, 0, 0, 0.08);
 }
 
@@ -943,7 +934,7 @@ div#user-edit-container div#user-edit-top-row {
   border: solid black;
   margin: 1.5em 3em 0 1.5em;
   padding: 0 1em 1em 1em;
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.5em;
   border-radius: 14px;
@@ -978,7 +969,7 @@ div#user-edit-container div#user-edit-bottom-row form {
   border: solid black;
   margin: 0 0.6em 0 1.5em;
   padding: 1em 1.5em 1em 1.5em;
-  background-color: #D0D6B3;
+  background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.5em;
   display: table;
@@ -995,11 +986,11 @@ div#user-edit-container div#user-edit-bottom-row form label, div#user-edit-conta
 
 div#user-edit-container div#user-edit-bottom-row form button, div#user-edit-container div#user-edit-bottom-row form a {
   display: inline-block;
-  background-color: #D0D6B3;
-  color: #143109;
+  background-color: #fefae0;
+  color: #283618;
   font-size: 2em;
   margin: 1em;
-  border: 0.2em solid #143109;
+  border: 0.2em solid #283618;
   border-radius: .2em;
   padding: .2em;
   -webkit-transition: all 0.5s ease;
@@ -1007,16 +998,16 @@ div#user-edit-container div#user-edit-bottom-row form button, div#user-edit-cont
 }
 
 div#user-edit-container div#user-edit-bottom-row form button:hover {
-  background-color: #143109;
+  background-color: #283618;
   /* Green */
-  color: #D0D6B3;
-  border: 0.2em solid #D0D6B3;
+  color: #fefae0;
+  border: 0.2em solid #fefae0;
 }
 
 div#user-edit-container div#user-edit-bottom-row form a:hover {
-  background-color: #143109;
+  background-color: #283618;
   /* Green */
-  color: #D0D6B3;
-  border: 0.2em solid #D0D6B3;
+  color: #fefae0;
+  border: 0.2em solid #fefae0;
 }
 /*# sourceMappingURL=main.css.map */
