@@ -4,7 +4,6 @@ div#user-show-container {
     display: flex;
     flex-direction: column;
     background-color: $primary-color;
-    text-shadow: .2em .3em .3em rgba(0,0,0,0.08);
 
     div#user-show-top-row {
         // width: 100vw;
@@ -14,8 +13,8 @@ div#user-show-container {
         padding: 0 1em 1em 1em;
         background-color: $secondary-color;
         border-color: #47745d5c;
-        border-width: 0.5em;
-        border-radius: 14px;
+        border-width: 0.1em 0.1em 0em 0.1em;
+        border-radius: 14px 14px 0 0;
 
         div#user-show-avatar-container {
             width: fit-content;
@@ -45,6 +44,23 @@ div#user-show-container {
                 }
             }
         }
+
+        figure {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            text-align: center;
+
+            img#medal {
+                width: 100px;
+                height: 100px;
+            }
+
+            figcaption {
+                font-size: 1.4em;
+            }
+        }
+        
     }
 
     div#user-show-middle-row {
@@ -55,13 +71,14 @@ div#user-show-container {
         #user-show-reviews-title-container{
             width:50%;
             border: solid black;
-            margin: 1em .6em 0 1.5em;
+            margin: 0 0 0 1.5em;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
-            border-width: 0.5em;
+            border-width: 0 0 0 0.1em;
 
             #reviews-title {
+                text-align: center;
                 font-size: 3em;
                 display: block;
                 margin: 0.5em 0 0 0;
@@ -71,13 +88,14 @@ div#user-show-container {
         #user-show-badges-title-container{
             width:50%;
             border: solid black;
-            margin: 1em 3em 0 0.6em;
+            margin: 0 3em 0 0;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
-            border-width: 0.5em;
+            border-width: 0 0.1em 0 0;
 
             #badges-title {
+                text-align: center;
                 font-size: 3em;
                 display: block;
                 margin: 0.5em 0 0 0;
@@ -89,49 +107,50 @@ div#user-show-container {
         width: 100vw;
         // height: 100vh;
         display: flex;
-        margin: 1em 0;
+        margin: 0;
 
         div#user-show-reviews-container {
             width:50%;
             border: solid black;
-            margin: 0 0.6em 0 1.5em;
+            margin: 0 0 0 1.5em;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
-            border-width: 0.5em;
+            border-width: 0 0 0 0.1em;
+            border-radius: 0 0 0 14px;
 
                 #park-name {
                     font-size: 3em;
                     display: block;
                     margin: 0.5em 0 0 0;
-                    text-shadow: .2em .2em .3em rgba(0,0,0,0.1);
-
                 }
 
                 #review-rating{
                     font-size: 2em;
+                    color: red;
                     display: inline;
-                    text-shadow: .2em .2em .3em rgba(0,0,0,0.1);
                 }
 
                 #review-comment{
                     font-size: 2em;
+                    font-style: italic;
                     display: inline;
                     margin: 0 1em 0 0;
-                    text-shadow: .1em .1em .5em rgba(0,0,0,0.1);
                 }
         }
 
         div#user-show-badges-container {
             width:50%;
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
             border: solid black;
-            margin: 0 3em 0 0.6em;
+            margin: 0 3em 0 0;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
-            border-width: 0.5em;
+            border-width: 0 0.1em 0 0;
+            border-radius: 0 0 14px 0 ;
 
             img.user-show-badge {
                 max-height: 100px;

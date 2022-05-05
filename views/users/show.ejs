@@ -17,6 +17,13 @@
                             <a href="/users/<%= user._id %>/edit">Edit Profile <img src="https://cdn-icons-png.flaticon.com/512/61/61456.png" alt="Edit Icon"></a>
                      <% } %>
               </div>
+              
+              <figure>
+                     <img id="medal" src="/images/<%= medal %>.png" alt="medal">
+                     <figcaption><%= medalMessage %></figcaption>
+              </figure>
+              
+                                 
        </div>
        <div id="user-show-middle-row">
               <div id="user-show-reviews-title-container">
@@ -35,13 +42,13 @@
                             <% if (userReviews.length > 0) { %>
                                    <% for(let i=0; i < userReviews.length; i++) { %>
                                           <div id="park-name">
-                                         <%= userReviews[i].park.name %>
+                                             <%= userReviews[i].park.name %>
                                           </div>
-                                         <% for(let j=0; j < userReviews[i].rating; j++) { %>
+                                          <% for(let j=0; j < userReviews[i].rating; j++) { %>
                                           <div id="review-rating">
-                                          &#9734;
+                                             &#9733;
                                           </div>
-                                         <% } %>
+                                          <% } %>
                                          <div id="review-comment">
                                          <q><%= userReviews[i].comment %></q>
                                          </div>

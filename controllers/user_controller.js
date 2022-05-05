@@ -49,7 +49,21 @@ router.get('/:id', async(req, res, next) => {
         const allParks = await db.Park.find({});
         let userReviews = await db.Rating.find({user: user._id}).populate('park');
 
+        let medal;
+        let medalMessage;
 
+        if(user.parks.length > 10) {
+            medal = "gold";
+            medalMessage = "Super User"
+        }
+        else if(user.parks.length > 3) {
+            medal = "silver";
+            medalMessage = "Active User"
+        }
+        else {
+            medal = "bronze";
+            medalMessage = "Registered User";
+        }
         // check for orphan reviews (where the Park ID changed and no longer maps correctly)
         userReviews = userReviews.filter((review) => review.park !== null)
 
@@ -62,7 +76,7 @@ router.get('/:id', async(req, res, next) => {
             }
         }
 
-        res.render("./users/show.ejs", {user: user, editOK: editOK, allParks: allParks, userReviews: userReviews});
+        res.render("./users/show.ejs", {user: user, editOK: editOK, allParks: allParks, userReviews: userReviews, medalMessage: medalMessage, medal: medal});
     }
     catch(err) {
         console.log("Error in user show: " + err);
