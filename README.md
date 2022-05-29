@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/sean3434/SixtyThree">
+  <a href="https://github.com/hcduffey/SixtyThree">
     <img src="public/images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,14 +34,14 @@
   <p align="center">
     U.S. National Park tracker application that allows users to track which of the 63 National Parks they've been to, earn milestone badges associated with the parks, and make posts and reviews based on their experiences.
     <br />
-    <a href="https://github.com/sean3434/SixtyThree"><strong>Explore the code »</strong></a>
+    <a href="https://github.com/hcduffey/SixtyThree"><strong>Explore the code »</strong></a>
     <br />
     <br />
-    <a href="https://sixtythree.herokuapp.com/">View Demo</a>
+    <a href="https://sixty-three.herokuapp.com/">View Demo</a>
     ·
-    <a href="https://github.com/sean3434/SixtyThree/issues">Report Bug</a>
+    <a href="https://github.com/hcduffey/SixtyThree/issues">Report Bug</a>
     ·
-    <a href="https://github.com/sean3434/SixtyThree/issues">Request Feature</a>
+    <a href="https://github.com/hcduffey/SixtyThree/issues">Request Feature</a>
   </p>
 </div>
 
@@ -104,7 +104,7 @@ MongoDB or and Mongo DB Atlas repository must be configured, and an API key must
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/sean3434/SixtyThree.git
+   git clone https://github.com/hcduffey/SixtyThree.git
    ```
 2. Install dependencies
 ```sh
@@ -152,7 +152,7 @@ The Users section allows you to view other users profiles. This allows you to se
 * As a user, I want to be able to have a customizable profile picture
 * As a user, I want to be able to see my favorite park and reflections/highlights on my profile page
 
-See the [open issues](https://github.com/sean3434/SixtyThree/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/hcduffey/SixtyThree/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -185,12 +185,12 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/sean3434/SixtyThree.svg?style=for-the-badge
-[contributors-url]: https://github.com/sean3434/SixtyThree/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/sean3434/SixtyThree.svg?style=for-the-badge
-[forks-url]: https://github.com/sean3434/SixtyThree/network/members
-[stars-shield]: https://img.shields.io/github/stars/sean3434/SixtyThree.svg?style=for-the-badge
-[stars-url]: https://github.com/sean3434/SixtyThree/stargazers
-[issues-shield]: https://img.shields.io/github/issues/sean3434/SixtyThree.svg?style=for-the-badge
-[issues-url]: https://github.com/sean3434/SixtyThree/issues
+[contributors-shield]: https://img.shields.io/github/contributors/hcduffey/SixtyThree.svg?style=for-the-badge
+[contributors-url]: https://github.com/hcduffey/SixtyThree/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/hcduffey/SixtyThree.svg?style=for-the-badge
+[forks-url]: https://github.com/hcduffey/SixtyThree/network/members
+[stars-shield]: https://img.shields.io/github/stars/hcduffey/SixtyThree.svg?style=for-the-badge
+[stars-url]: https://github.com/hcduffey/SixtyThree/stargazers
+[issues-shield]: https://img.shields.io/github/issues/hcduffey/SixtyThree.svg?style=for-the-badge
+[issues-url]: https://github.com/hcduffey/SixtyThree/issues
 [product-screenshot]: public/images/screen_shot.png
