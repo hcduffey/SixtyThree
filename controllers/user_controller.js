@@ -96,6 +96,7 @@ router.put('/:id', async (req, res, next) => {
                     usertoUpdate.parks.push(parktoAdd);
                     usertoUpdate.badges.push(badgetoAdd);
                     usertoUpdate.save();
+                    return res.redirect('back');
                 }
                 else {
                     if(req.body.password === '') {
