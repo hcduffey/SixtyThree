@@ -599,8 +599,8 @@ h1 {
 }
 
 div#user-show-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,7 +616,7 @@ div#user-show-container div#user-show-top-row {
   display: -ms-flexbox;
   display: flex;
   border: solid black;
-  margin: 1.5em 3em 0 1.5em;
+  margin: 1.5em 1.5em 0 1.5em;
   padding: 0 1em 1em 1em;
   background-color: #fefae0;
   border-color: #47745d5c;
@@ -740,7 +740,7 @@ div#user-show-container div#user-show-bottom-row div#user-show-reviews-container
   background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0 0 0 0.1em;
-  border-radius: 0 0 0 14px;
+  border-radius: 0 0 0 0;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container #park-name {
@@ -777,7 +777,7 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
   background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0 0.1em 0 0;
-  border-radius: 0 0 14px 0;
+  border-radius: 0 0 0 0;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-badges-container img.user-show-badge {

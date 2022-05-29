@@ -1,6 +1,6 @@
 div#user-show-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: $primary-color;
@@ -9,7 +9,7 @@ div#user-show-container {
         // width: 100vw;
         display: flex;
         border: solid black;
-        margin: 1.5em 3em 0 1.5em;
+        margin: 1.5em 1.5em 0 1.5em;
         padding: 0 1em 1em 1em;
         background-color: $secondary-color;
         border-color: #47745d5c;
@@ -117,7 +117,7 @@ div#user-show-container {
             background-color: $secondary-color;
             border-color: #47745d5c;
             border-width: 0 0 0 0.1em;
-            border-radius: 0 0 0 14px;
+            border-radius: 0 0 0 0;
 
                 #park-name {
                     font-size: 3em;
@@ -150,7 +150,7 @@ div#user-show-container {
             background-color: $secondary-color;
             border-color: #47745d5c;
             border-width: 0 0.1em 0 0;
-            border-radius: 0 0 14px 0 ;
+            border-radius: 0 0 0 0 ;
 
             img.user-show-badge {
                 max-height: 100px;
