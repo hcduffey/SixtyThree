@@ -52,6 +52,7 @@ router.get('/:id', async(req, res, next) => {
         let medal;
         let medalMessage;
 
+        // determine which medal the profile gets
         if(user.parks.length > 10) {
             medal = "gold";
             medalMessage = "Super User"
@@ -68,7 +69,6 @@ router.get('/:id', async(req, res, next) => {
         userReviews = userReviews.filter((review) => review.park !== null)
 
         let editOK = false;
-
         // a user should only be able to edit their own profile
         if(req.session.currentUser) {
             if(req.session.currentUser.id === req.params.id) {
