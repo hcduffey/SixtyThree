@@ -600,7 +600,7 @@ h1 {
 
 div#user-show-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,7 +608,7 @@ div#user-show-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #283618;
+  background-color: #fefae0;
 }
 
 div#user-show-container div#user-show-top-row {
@@ -616,12 +616,10 @@ div#user-show-container div#user-show-top-row {
   display: -ms-flexbox;
   display: flex;
   border: solid black;
-  margin: 1.5em 1.5em 0 1.5em;
   padding: 0 1em 1em 1em;
   background-color: #fefae0;
   border-color: #47745d5c;
   border-width: 0.1em 0.1em 0em 0.1em;
-  border-radius: 14px 14px 0 0;
 }
 
 div#user-show-container div#user-show-top-row div#user-show-avatar-container {
@@ -684,7 +682,6 @@ div#user-show-container div#user-show-top-row figure figcaption {
 }
 
 div#user-show-container div#user-show-middle-row {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,7 +690,6 @@ div#user-show-container div#user-show-middle-row {
 div#user-show-container div#user-show-middle-row #user-show-reviews-title-container {
   width: 50%;
   border: solid black;
-  margin: 0 0 0 1.5em;
   padding: 0 1em 1em 1em;
   background-color: #fefae0;
   border-color: #47745d5c;
@@ -710,7 +706,6 @@ div#user-show-container div#user-show-middle-row #user-show-reviews-title-contai
 div#user-show-container div#user-show-middle-row #user-show-badges-title-container {
   width: 50%;
   border: solid black;
-  margin: 0 3em 0 0;
   padding: 0 1em 1em 1em;
   background-color: #fefae0;
   border-color: #47745d5c;
@@ -725,17 +720,14 @@ div#user-show-container div#user-show-middle-row #user-show-badges-title-contain
 }
 
 div#user-show-container div#user-show-bottom-row {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
 }
 
 div#user-show-container div#user-show-bottom-row div#user-show-reviews-container {
   width: 50%;
   border: solid black;
-  margin: 0 0 0 1.5em;
   padding: 0 1em 1em 1em;
   background-color: #fefae0;
   border-color: #47745d5c;
@@ -772,7 +764,6 @@ div#user-show-container div#user-show-bottom-row div#user-show-badges-container 
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border: solid black;
-  margin: 0 3em 0 0;
   padding: 0 1em 1em 1em;
   background-color: #fefae0;
   border-color: #47745d5c;

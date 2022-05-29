@@ -1,21 +1,19 @@
 div#user-show-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: $primary-color;
+    background-color: $secondary-color  ;
 
     div#user-show-top-row {
         // width: 100vw;
         display: flex;
         border: solid black;
-        margin: 1.5em 1.5em 0 1.5em;
+        // margin: 1.5em 1.5em 0 1.5em;
         padding: 0 1em 1em 1em;
         background-color: $secondary-color;
         border-color: #47745d5c;
         border-width: 0.1em 0.1em 0em 0.1em;
-        border-radius: 14px 14px 0 0;
-
         div#user-show-avatar-container {
             width: fit-content;
             height: fit-content;
@@ -64,14 +62,14 @@ div#user-show-container {
     }
 
     div#user-show-middle-row {
-        width: 100vw;
+        //width: 100vw;
         // height: 100vh;
         display: flex;
 
         #user-show-reviews-title-container{
             width:50%;
             border: solid black;
-            margin: 0 0 0 1.5em;
+            // margin: 0 0 0 1.5em;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
@@ -88,7 +86,7 @@ div#user-show-container {
         #user-show-badges-title-container{
             width:50%;
             border: solid black;
-            margin: 0 3em 0 0;
+            // margin: 0 3em 0 0;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
@@ -104,15 +102,15 @@ div#user-show-container {
     }
 
     div#user-show-bottom-row {
-        width: 100vw;
+        // width: 100vw;
         // height: 100vh;
         display: flex;
-        margin: 0;
+        // margin: 0;
 
         div#user-show-reviews-container {
             width:50%;
             border: solid black;
-            margin: 0 0 0 1.5em;
+            // margin: 0 0 0 1.5em;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
@@ -145,7 +143,7 @@ div#user-show-container {
             justify-content: space-around;
             flex-wrap: wrap;
             border: solid black;
-            margin: 0 3em 0 0;
+            // margin: 0 3em 0 0;
             padding: 0 1em 1em 1em;
             background-color: $secondary-color;
             border-color: #47745d5c;
